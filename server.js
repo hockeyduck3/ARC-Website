@@ -17,6 +17,10 @@ server.use(express.static('public'));
 server.engine('handlebars', expressHandlebars({ defaultLayout: 'main' }));
 server.set('view engine', 'handlebars');
 
+const routes = require('./routes/html-routes');
+
+server.use(routes);
+
 server.listen(PORT, () => {
     console.log(`Server listening on port: ${PORT}. If you're using localhost, click here: http://localhost:${PORT}`);
 });
