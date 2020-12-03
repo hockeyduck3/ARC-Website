@@ -55,9 +55,9 @@
     transition: ease-out 0.3s;
 }
 
-#page .nav-link:hover {
+#page .nav-link:hover, .fab:hover {
     color: #9a9afa;
-    transition: ease-in-out 0.4s;
+    transition: ease-in 0.4s;
 }
 
 #page .active {
