@@ -1,4 +1,4 @@
-.aboveNav {
+.pageTopper {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -27,15 +27,26 @@
 }
 
 .navbar {
-    background-color: #fff;
-    height: 100px;
+    background-color: #fff !important;
+    min-height: 100px;
 }
 
 .navbar-brand {
     margin-left: 40px;
+    height: 100px;
+    line-height: 90px;
 }
 
-.nav-link {
+#page .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(0,0,0)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+#page .navbar-toggler, #page .navbar-toggler:focus {
+    outline: none;
+    border-color: transparent;
+}
+
+#page .nav-link {
     color: #343434;
     font-family: 'Open Sans', sans-serif;
     font-size: 20px;
@@ -44,12 +55,12 @@
     transition: ease-out 0.3s;
 }
 
-.nav-link:hover {
+#page .nav-link:hover {
     color: #9a9afa;
     transition: ease-in-out 0.4s;
 }
 
-.active a {
+#page .active {
     color: #9a9afa;
 }
 
@@ -58,14 +69,15 @@
     border-radius: 4px;
     box-shadow: 0px 2px 4px 0px #9a9afa;
     font-size: 24px;
-    margin: 0 13px;
+    margin: 0 20px;
     transition: ease-out 0.3s;
 }
 
-.donate a {
+#page .donate a {
     color: #fff;
-    width: 145px;
+    margin: 0;
     text-align: center;
+    width: 130px;
 }
 
 .donate:hover {
@@ -73,6 +85,6 @@
     transition: ease-in 0.3s;
 }
 
-.donate .nav-link:hover {
+#page .donate .nav-link:hover {
     color: #fff;
 }
