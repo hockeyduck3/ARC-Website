@@ -1,5 +1,5 @@
 {
-  "name": "ARC-Website",
+  "name": "arc-website",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -17,5 +17,9 @@
   "bugs": {
     "url": "https://github.com/hockeyduck3/ARC-Website/issues"
   },
-  "homepage": "https://github.com/hockeyduck3/ARC-Website#readme"
+  "homepage": "https://github.com/hockeyduck3/ARC-Website#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.0"
+  }
 }
