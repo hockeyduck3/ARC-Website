@@ -2,8 +2,9 @@
 // This function will make it so that the navbar will close by itself on mobile, if the user clicks anywhere else on the page.
 $(document).click((event) => {
     let click = $(event.target);
+    let width = screen.width;
 
-    if ($('.navbar-toggler').attr('aria-expanded') === 'true' && click.closest('.navbar').length === 0) {
+    if ($('.navbar-toggler').attr('aria-expanded') === 'true' && click.closest('.navbar').length === 0 && width < 1024) {
         $('button[aria-expanded="true"]').click();
     }
 });
