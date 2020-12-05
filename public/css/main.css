@@ -1,3 +1,13 @@
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
 /* Top of the website */
 .pageTopper {
     display: flex;
@@ -22,7 +32,7 @@
     left: 5%;
 }
 
-.socialMediaLinks, .donateTop {
+.socialMediaTop, .donateTop {
     position: absolute;
     top: 9px;
     right: 2%;
@@ -30,10 +40,10 @@
 
 .fab {
     color: #fff;
-    margin-right: 10px;
+    margin-right: 15px;
 }
 
-.donateNav, .donateTop {
+.donateNav, .donateTop, .signUpBtn {
     background-color: #9a9afa;
     border-radius: 4px;
     box-shadow: 0px 2px 4px 0px #9a9afa;
@@ -105,6 +115,49 @@
     color: #fff;
 }
 
+/* Footer */
+footer {
+    color: #fff;
+    margin-top: auto;
+    background-color: #2F3061;
+    min-height: 300px;
+}
+
+form {
+    margin-top: 30px;
+}
+
+.footerTop {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* Email Sign Up */
+#emailInput {
+    width: 275px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: row;
+}
+
+.signUpBtn {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 0 24px;
+}
+
+/* Social Media Links */
+.socialMediaFooter {
+    margin: 70px 50px 0 0;
+}
+
+.fabFooter {
+    margin-right: 30px;
+}
 
 /* Media Queries */
 
