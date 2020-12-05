@@ -54,6 +54,7 @@
 
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
+                    {{!-- Each 'a' tag is wrapped in an if/else to check and see which page is the user is on, and only give the 'active' class name to the proper page. --}}
                     <li class="nav-item">
                         {{#if home}}
                             <a class="nav-link active" href="/">Home</a>
@@ -101,7 +102,9 @@
             </div>
         </nav>
 
+        {{!-- Main Content --}}
         {{{ body }}}
+
 
         {{!-- Footer --}}
         <footer>
