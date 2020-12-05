@@ -174,7 +174,7 @@ form {
 
 /* Mobile phones */
 @media (max-width: 640px) {
-    .address, .socialMediaLinks, .donateNav {
+    .address, .socialMediaTop, .donateNav {
         display: none;
     }
 
