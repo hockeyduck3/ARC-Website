@@ -106,12 +106,13 @@ body {
     color: #9a9afa;
 }
 
-.donate:hover {
+.donateNav:hover, .signUpBtn:hover {
+    color: #fff;
     transform: scale(1.03);
     transition: ease-in 0.3s;
 }
 
-#page .donateNav {
+.donateBtn, #page .donateBtn:hover {
     color: #fff;
 }
 
@@ -124,7 +125,7 @@ footer {
 }
 
 form {
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 .footerTop {
@@ -152,10 +153,11 @@ form {
 
 /* Social Media Links */
 .socialMediaFooter {
-    margin: 70px 50px 0 0;
+    margin: 50px 50px 0 0;
 }
 
 .fabFooter {
+    font-size: 40px;
     margin-right: 30px;
 }
 
