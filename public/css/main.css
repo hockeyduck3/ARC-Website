@@ -42,6 +42,7 @@ body {
 .fab {
     color: #fff;
     margin-right: 15px;
+    transition: ease-out 0.3s;
 }
 
 .donateNav, .donateTop, .signUpBtn {
@@ -101,7 +102,7 @@ body {
 
 #page .nav-link:hover, .fab:hover {
     color: #9a9afa;
-    transition: ease-in 0.4s;
+    transition: ease-in 0.3s;
 }
 
 #page .active {
