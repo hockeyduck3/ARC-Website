@@ -125,7 +125,7 @@ footer {
 }
 
 form {
-    margin-top: 20px;
+    margin: 2% 0 0 7%;
 }
 
 .footerTop {
@@ -153,7 +153,7 @@ form {
 
 /* Social Media Links */
 .socialMediaFooter {
-    margin: 50px 50px 0 0;
+    margin: 55px 5% 0 0;
 }
 
 .fabFooter {
@@ -165,15 +165,27 @@ form {
 
 /* Tablets */
 @media (max-width: 992px) {
+    /* Navbar Queries */
     .nav-link, #page .donateNav a {
         box-shadow: none;
         text-align: center;
         width: auto;
     }
+
+
+    /* Footer Queries */
+    form {
+        margin-left: 2%;
+    }
+
+    .socialMediaFooter {
+        margin: 7% 0 0 0;
+    }
 }
 
 /* Mobile phones */
-@media (max-width: 640px) {
+@media (max-width: 711px) {
+    /* Navbars Queries */
     .address, .socialMediaTop, .donateNav {
         display: none;
     }
@@ -196,6 +208,39 @@ form {
         height: 80px;
         line-height: 70px;
         margin-left: 20px;
+    }
+
+
+    /* Footer Queries */
+    .footerTop {
+        flex-direction: column-reverse;
+    }
+
+    /* Sign Up Queries */
+    .form-group {
+        flex-direction: column;
+    }
+
+    .signUpTitle {
+        margin-bottom: 5px;
+        text-align: center;
+    }
+
+    #emailInput {
+        width: 90%;
+        margin: 15px auto;
+    }
+
+    /* Social Media Queries */
+    .fab, .fabFooter {
+        margin: 0;
+    }
+
+    .socialMediaFooter {
+        display: flex;
+        justify-content: space-evenly;
+        margin: 4% auto;
+        width: 100%;
     }
 }
 
