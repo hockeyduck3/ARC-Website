@@ -108,31 +108,67 @@
 
         {{!-- Footer --}}
         <footer>
-            <div class="footerTop">
-                <form>
-                    <p class="signUpTitle">Sign Up for the Latest Updates on ARC</p>
+            <div class="container">
+                {{!-- Email and Social Media Links --}}
+                <div class="footerTop">
+                    <form>
+                        <p class="signUpTitle">Sign Up for the Latest Updates on ARC</p>
 
-                    <div class="form-group">
-                        <input type="email" class="form-control" id="emailInput" placeholder="Enter Email Address">
-                        <button type="submit" class="btn signUpBtn">Sign Up</button>
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="emailInput" placeholder="Enter Email Address">
+                            <button type="submit" class="btn signUpBtn">Sign Up</button>
+                        </div>
+                    </form>
+
+                    <div class="socialMediaFooter">
+                        {{!-- Facebook --}}
+                        <a href="https://www.facebook.com">
+                            <i class="fab fabFooter fa-facebook fa-2x"></i>
+                        </a>
+
+                        {{!-- Twitter --}}
+                        <a href="https://twitter.com">
+                            <i class="fab fabFooter fa-twitter fa-2x"></i>
+                        </a>
+
+                        {{!-- Youtube --}}
+                        <a href="https://www.youtube.com">
+                            <i class="fab fabFooter fa-youtube fa-2x"></i>
+                        </a>
                     </div>
-                </form>
+                </div>
 
-                <div class="socialMediaFooter">
-                    {{!-- Facebook --}}
-                    <a href="https://www.facebook.com">
-                        <i class="fab fabFooter fa-facebook fa-2x"></i>
-                    </a>
+                {{!-- Webpage Links and Google Maps --}}
+                <div class="footerBottom">
+                    <ul class="mainLinks">
+                        <li>
+                            <a href="/">Home</a>
+                        </li>
 
-                    {{!-- Twitter --}}
-                    <a href="https://twitter.com">
-                        <i class="fab fabFooter fa-twitter fa-2x"></i>
-                    </a>
+                        <li>
+                            <a href="/about">About Us</a>
+                        </li>
 
-                    {{!-- Youtube --}}
-                    <a href="https://www.youtube.com">
-                        <i class="fab fabFooter fa-youtube fa-2x"></i>
-                    </a>
+                        <li>
+                            <a href="/programs">Programs</a>
+                        </li>
+
+                        <li>
+                            <a href="#">Press & Media</a>
+                        </li>
+
+                        <li>
+                            <a href="/gallery">Photo Gallery</a>
+                        </li>
+
+                        <li>
+                            <a href="/involved">Get Involved</a>
+                        </li>
+
+                        <li>
+                            <a href="#">Donate</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </footer>

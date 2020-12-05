@@ -8,6 +8,7 @@ body {
     flex-direction: column;
 }
 
+
 /* Top of the website */
 .pageTopper {
     display: flex;
@@ -67,6 +68,7 @@ body {
     padding: 2px 0;
 }
 
+
 /* Navbar */
 .navbar {
     background-color: #fff !important;
@@ -116,18 +118,17 @@ body {
     color: #fff;
 }
 
+
 /* Footer */
 footer {
     color: #fff;
     margin-top: auto;
     background-color: #2F3061;
-    min-height: 300px;
+    min-height: 380px;
 }
 
-form {
-    margin: 2% 0 0 7%;
-}
 
+/* Footer Top */
 .footerTop {
     display: flex;
     flex-direction: row;
@@ -135,6 +136,10 @@ form {
 }
 
 /* Email Sign Up */
+form {
+    margin: 2% 0;
+}
+
 #emailInput {
     width: 275px;
 }
@@ -151,14 +156,28 @@ form {
     padding: 0 24px;
 }
 
+
 /* Social Media Links */
 .socialMediaFooter {
-    margin: 55px 5% 0 0;
+    margin: 55px 0;
 }
 
 .fabFooter {
     font-size: 40px;
     margin-right: 30px;
+}
+
+
+/* Footer Bottom */
+.mainLinks {
+    list-style-type: none;
+    margin: 2% 0;
+    padding: 0;
+}
+
+.mainLinks a {
+    color: #fff;
+    text-decoration: none;
 }
 
 /* Media Queries */
@@ -174,17 +193,13 @@ form {
 
 
     /* Footer Queries */
-    form {
-        margin-left: 2%;
-    }
-
     .socialMediaFooter {
-        margin: 7% 0 0 0;
+        margin: 7% 0;
     }
 }
 
 /* Mobile phones */
-@media (max-width: 711px) {
+@media (max-width: 767px) {
     /* Navbars Queries */
     .address, .socialMediaTop, .donateNav {
         display: none;
@@ -230,6 +245,7 @@ form {
         width: 90%;
         margin: 15px auto;
     }
+
 
     /* Social Media Queries */
     .fab, .fabFooter {
