@@ -194,7 +194,11 @@ form {
 /* Media Queries */
 
 /* Tablets */
-@media (max-width: 992px) {
+@media (max-width: 991px) {
+    .container {
+        max-width: 910px;
+    }
+
     /* Navbar Queries */
     .nav-link, #page .donateNav a {
         box-shadow: none;

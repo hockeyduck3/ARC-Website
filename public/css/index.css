@@ -26,6 +26,10 @@
 
 /* Mobile */
 @media (max-width: 767px) {
+    .indicator {
+        display: none;
+    }
+
     #mission {
         width: 100%;
     }
@@ -35,6 +39,6 @@
     }
 
     #mission p {
-        font-size: 16px;
+        font-size: 16.5px;
     }
 }
