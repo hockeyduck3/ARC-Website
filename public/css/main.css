@@ -182,6 +182,10 @@ form {
     text-decoration: none;
 }
 
+.footerContact {
+    width: 24%;
+}
+
 #map {
     margin: 2% 35px 50px 0;
 }
@@ -239,12 +243,24 @@ form {
     }
 
     .footerBottom {
-        flex-direction: column;
+        flex-direction: column-reverse;
         text-align: center;
     }
 
+    .mainLinks {
+        display: none;
+    }
+
+    .footerContact {
+        width: 100%;
+    }
+
+    .secondaryLinks {
+        margin-bottom: 30px;
+    }
+
     #map {
-        margin: 2% auto 30px auto;
+        margin: 2% auto;
     }
 
     /* Sign Up Queries */
