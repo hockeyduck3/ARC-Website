@@ -77,13 +77,13 @@ body {
 /* Navbar */
 .navbar {
     background-color: #fff !important;
-    min-height: 100px;
+    min-height: 80px;
 }
 
 .navbar-brand {
     margin-left: 40px;
-    height: 100px;
-    line-height: 90px;
+    height: 80px;
+    line-height: 70px;
 }
 
 #page .navbar-toggler-icon {
