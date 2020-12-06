@@ -5,5 +5,36 @@
 }
 
 #carousel {
-    margin-bottom: 80px;
+    margin-bottom: 70px;
+}
+
+#mission {
+    text-align: center;
+    width: 80%;
+    margin: 10px auto;
+}
+
+#mission h3 {
+    font-weight: 800;
+}
+
+#mission p {
+    font-weight: 400;
+}
+
+/* Media Queries */
+
+/* Mobile */
+@media (max-width: 767px) {
+    #mission {
+        width: 100%;
+    }
+
+    #mission h3 {
+        font-size: 22px;
+    }
+
+    #mission p {
+        font-size: 16px;
+    }
 }

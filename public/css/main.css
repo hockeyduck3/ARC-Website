@@ -5,6 +5,7 @@ html {
 body {
     min-height: 100%;
     display: flex;
+    font-family: 'Open Sans', sans-serif;
     flex-direction: column;
 }
 
@@ -27,7 +28,6 @@ body {
     top: 9px;
     left: 2%;
     color: #fff;
-    font-family: 'Open Sans', sans-serif;
     font-size: 14px;
 }
 
@@ -183,7 +183,7 @@ form {
 }
 
 .footerContact {
-    width: 24%;
+    width: 23%;
 }
 
 #map {
