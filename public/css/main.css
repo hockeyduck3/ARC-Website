@@ -129,7 +129,7 @@ footer {
     color: #fff;
     margin-top: auto;
     background-color: #2F3061;
-    min-height: 380px;
+    min-height: 400px;
 }
 
 
@@ -167,20 +167,25 @@ form {
 
 
 /* Footer Bottom */
-.mainLinks, .secondaryLinks {
+.boxOne {
+    justify-content: space-between;
+}
+
+.mainLinks, .secondaryLinks, .footerContact {
     list-style-type: none;
     margin: 2% 0;
     padding: 0;
 }
 
-.secondaryLinks {
-    margin-left: 90px;
-}
-
-.mainLinks a, .secondaryLinks a {
+.mainLinks a, .secondaryLinks a, .footerContact a {
     color: #fff;
     text-decoration: none;
 }
+
+#map {
+    margin: 2% 35px 50px 0;
+}
+
 
 /* Media Queries */
 
