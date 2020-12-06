@@ -8,11 +8,15 @@ body {
     flex-direction: column;
 }
 
+/* Flex styling */
+.pageTopper, .footerTop, .form-group, .boxOne {
+    display: flex;
+    flex-direction: row;
+}
+
 
 /* Top of the website */
 .pageTopper {
-    display: flex;
-    flex-direction: row;
     justify-content: space-between;
     background-color: #2F3061;
     height: 40px;
@@ -131,8 +135,6 @@ footer {
 
 /* Footer Top */
 .footerTop {
-    display: flex;
-    flex-direction: row;
     justify-content: space-between;
 }
 
@@ -143,11 +145,6 @@ form {
 
 #emailInput {
     width: 275px;
-}
-
-.form-group {
-    display: flex;
-    flex-direction: row;
 }
 
 .signUpBtn {
@@ -170,13 +167,17 @@ form {
 
 
 /* Footer Bottom */
-.mainLinks {
+.mainLinks, .secondaryLinks {
     list-style-type: none;
     margin: 2% 0;
     padding: 0;
 }
 
-.mainLinks a {
+.secondaryLinks {
+    margin-left: 90px;
+}
+
+.mainLinks a, .secondaryLinks a {
     color: #fff;
     text-decoration: none;
 }
