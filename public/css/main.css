@@ -9,7 +9,7 @@ body {
 }
 
 /* Flex styling */
-.pageTopper, .footerTop, .form-group, .boxOne {
+.pageTopper, .footerTop, .footerBottom, .form-group {
     display: flex;
     flex-direction: row;
 }
@@ -167,7 +167,7 @@ form {
 
 
 /* Footer Bottom */
-.boxOne {
+.footerBottom {
     justify-content: space-between;
 }
 
@@ -238,7 +238,7 @@ form {
         flex-direction: column-reverse;
     }
 
-    .boxOne {
+    .footerBottom {
         flex-direction: column;
         text-align: center;
     }
