@@ -238,6 +238,15 @@ form {
         flex-direction: column-reverse;
     }
 
+    .boxOne {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #map {
+        margin: 2% auto 30px auto;
+    }
+
     /* Sign Up Queries */
     .form-group {
         flex-direction: column;
