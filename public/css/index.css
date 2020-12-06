@@ -22,6 +22,35 @@
     font-weight: 400;
 }
 
+#religions {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 15px auto;
+    width: 75%;
+}
+
+.missionBtn {
+    background-color: #9a9afa;
+    border-radius: 4px;
+    box-shadow: 0px 2px 4px 0px #9a9afa;
+    color: #fff;
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 30px auto;
+    padding: .5rem 1rem;
+    transition: ease-out 0.3s;
+    width: 162px;
+}
+
+.missionBtn:hover {
+    color: #fff;
+    text-decoration: none;
+    transform: scale(1.03);
+    transition: ease-in 0.3s;
+}
+
 /* Media Queries */
 
 /* Mobile */
@@ -40,5 +69,9 @@
 
     #mission p {
         font-size: 16.5px;
+    }
+
+    #religions {
+        width: 100%;
     }
 }
