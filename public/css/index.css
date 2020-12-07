@@ -1,5 +1,5 @@
 /* Flex */
-#religions, #accomplishments, .accompRow {
+#religions, #accomplishments, .accompRow, #programs {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -90,6 +90,20 @@
 
 .accompText {
     color: #000000;
+}
+
+#programs {
+    text-align: center;
+}
+
+#programs h3 {
+    font-size: 28px;
+    font-weight: 700;
+    margin: 50px 0;
+}
+
+.programsRowOne, .programsRowTwo {
+    margin-bottom: 30px;
 }
 
 
