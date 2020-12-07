@@ -102,8 +102,20 @@
     margin: 50px 0;
 }
 
+#programs img {
+    opacity: 0.2;
+    width: 100%;
+}
+
 .programsRowOne, .programsRowTwo {
     margin-bottom: 30px;
+}
+
+.programsRowOne p, .programsRowTwo p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 
