@@ -12,7 +12,7 @@
 }
 
 #carousel {
-    margin-bottom: 70px;
+    margin-bottom: 50px;
 }
 
 #mission {
@@ -23,6 +23,7 @@
 
 #mission h3 {
     font-weight: 800;
+    margin-bottom: 30px;
 }
 
 #mission p {
@@ -158,5 +159,13 @@
 
     .accompCard:last-child {
         margin-bottom: 0;
+    }
+
+    #programs img {
+        margin-bottom: 30px;
+    }
+
+    .programsBtn {
+        margin-top: 10px;
     }
 }
