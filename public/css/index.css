@@ -97,6 +97,10 @@
 
 /* Mobile */
 @media (max-width: 767px) {
+    #carousel {
+        margin-bottom: 35px;
+    }
+
     .indicator {
         display: none;
     }
