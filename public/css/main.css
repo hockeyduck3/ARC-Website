@@ -206,6 +206,10 @@ form {
         width: auto;
     }
 
+    #page .nav-link {
+        font-size: 25px;
+    }
+
     .donateNav {
         margin: 5px 200px 10px 200px;
     }

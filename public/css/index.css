@@ -1,3 +1,10 @@
+/* Flex */
+#religions, #accomplishments, .accompRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
 #page .indicator {
     border-radius: 50%;
     height: 7px;
@@ -11,7 +18,7 @@
 #mission {
     text-align: center;
     width: 80%;
-    margin: 10px auto;
+    margin: 10px auto 50px auto;
 }
 
 #mission h3 {
@@ -20,17 +27,15 @@
 
 #mission p {
     font-weight: 400;
+    margin-bottom: 25px;
 }
 
 #religions {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
     margin: 15px auto;
     width: 75%;
 }
 
-.missionBtn {
+.missionBtn, .accompBtn {
     background-color: #9a9afa;
     border-radius: 4px;
     box-shadow: 0px 2px 4px 0px #9a9afa;
@@ -38,18 +43,55 @@
     display: block;
     font-size: 18px;
     font-weight: 600;
-    margin: 30px auto;
+    margin: 35px auto;
     padding: .5rem 1rem;
     transition: ease-out 0.3s;
     width: 162px;
 }
 
-.missionBtn:hover {
+.accompBtn {
+    width: 219px;
+}
+
+.missionBtn:hover, .accompBtn:hover {
     color: #fff;
     text-decoration: none;
     transform: scale(1.03);
     transition: ease-in 0.3s;
 }
+
+#accomplishments {
+    text-align: center;
+}
+
+#accomplishments h3 {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.accompRow {
+    margin: 50px 0;
+}
+
+.accompCard {
+    background-color: #9a9afa;
+    border-radius: 5px;
+    color: #2F3061;
+    height: 320px;
+    padding-top: 40px;
+}
+
+.accompNumber {
+    color: #fff;
+    font-size: 45px;
+    font-weight: 700;
+    padding: 20px 0 0 0;
+}
+
+.accompText {
+    color: #000000;
+}
+
 
 /* Media Queries */
 
@@ -73,5 +115,18 @@
 
     #religions {
         width: 100%;
+    }
+
+    .missionBtn, .accompBtn {
+        box-shadow: none;
+    }
+
+    .accompCard {
+        margin-bottom: 35px;
+        width: 90%;
+    }
+
+    .accompCard:last-child {
+        margin-bottom: 0;
     }
 }
