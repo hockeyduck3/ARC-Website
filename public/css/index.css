@@ -35,7 +35,7 @@
     width: 75%;
 }
 
-.missionBtn, .accompBtn {
+.missionBtn, .accompBtn, .programsBtn {
     background-color: #9a9afa;
     border-radius: 4px;
     box-shadow: 0px 2px 4px 0px #9a9afa;
@@ -53,7 +53,7 @@
     width: 219px;
 }
 
-.missionBtn:hover, .accompBtn:hover {
+.missionBtn:hover, .accompBtn:hover, .programsBtn:hover {
     color: #fff;
     text-decoration: none;
     transform: scale(1.03);
