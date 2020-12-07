@@ -200,7 +200,7 @@ form {
     }
 
     /* Navbar Queries */
-    .nav-link, #page .donateNav a {
+    .nav-link, #page .donateNav a, .signUpBtn {
         box-shadow: none;
         text-align: center;
         width: auto;
