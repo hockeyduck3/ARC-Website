@@ -127,9 +127,34 @@
 
 .program:hover {
     transition: ease-in 0.3s;
-    transform: scale(1.03);
+    transform: scale(1.02);
 }
 
+#people {
+    margin-bottom: 50px;
+}
+
+#people h3 {
+    text-align: center;
+    font-weight: 700;
+    margin: 50px 0;
+}
+
+#people img {
+    opacity: 0.2;
+}
+
+.overlay {
+    background-color: rgba(47, 48, 97, 1);
+}
+
+#people .carousel-caption {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+}
 
 /* Media Queries */
 
