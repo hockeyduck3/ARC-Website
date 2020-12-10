@@ -1,0 +1,54 @@
+/* Flex */
+#accomplishments, .accompRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#accomplishments {
+    text-align: center;
+}
+
+#accomplishments h3 {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.accompRow {
+    margin: 50px 0 0 0;
+}
+
+.accompCard {
+    background-color: #9a9afa;
+    border-radius: 5px;
+    color: #2F3061;
+    height: 320px;
+    padding-top: 40px;
+}
+
+.accompNumber {
+    color: #fff;
+    font-size: 45px;
+    font-weight: 700;
+    padding: 20px 0 0 0;
+}
+
+.accompText {
+    color: #000000;
+    font-weight: 400;
+}
+
+
+/* Media Queries */
+
+/* Phone Styling */
+@media (max-width: 767px) {
+    .accompCard {
+        margin-bottom: 35px;
+        width: 90%;
+    }
+
+    .accompCard:last-child {
+        margin-bottom: 0;
+    }
+}

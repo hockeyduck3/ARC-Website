@@ -1,0 +1,32 @@
+#follow div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 90px;
+}
+
+#follow iframe {
+    width: 60%;
+    border: 1px solid #2F3061 !important;
+    box-shadow: 0px 0px 3px 1px #2F3061;
+}
+
+.twitter-timeline {
+    width: 30% !important; 
+}
+
+/* Media Queries */
+
+/* Phone Styling */
+@media (max-width: 767px) {
+    #follow div {
+        flex-direction: column;
+        margin-bottom: 50px;
+    }
+
+    #follow iframe {
+        width: 90% !important;
+        height: 190px;
+        margin: 0 auto 30px auto;
+    }
+}

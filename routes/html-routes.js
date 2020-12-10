@@ -6,7 +6,14 @@ const router = express.Router();
 router.get('/', (req, page) => {
     page.render('index', {
         home: true,
-        style: 'index'
+        styleSheets: [
+            'index',
+            'mission',
+            'accomplishments',
+            'programs',
+            'people',
+            'follow'
+        ]
     });
 });
 

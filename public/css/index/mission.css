@@ -1,0 +1,53 @@
+/* Entire section */
+#mission {
+    text-align: center;
+    width: 80%;
+    margin: 10px auto 50px auto;
+}
+
+/* Title */
+#mission h3 {
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+
+/* Test */
+#mission p {
+    font-weight: 400;
+    margin-bottom: 25px;
+}
+
+/* Religion logos */
+#religions {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 15px auto;
+    width: 75%;
+}
+
+
+/* Media Queries */
+
+/* Phone Styling */
+@media (max-width: 767px) {
+    /* Entire Section */
+    #mission {
+        width: 100%;
+    }
+
+    /* Title */
+    #mission h3 {
+        font-size: 25px;
+    }
+
+    /* Title */
+    #mission p {
+        font-size: 16.5px;
+    }
+
+    /* Religion logos */
+    #religions {
+        width: 100%;
+    }
+}

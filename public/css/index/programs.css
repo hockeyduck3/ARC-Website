@@ -1,0 +1,53 @@
+#programs {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+#programs h3 {
+    font-size: 28px;
+    font-weight: 700;
+    margin: 50px 0;
+}
+
+#programs img {
+    opacity: 0.2;
+    width: 100%;
+}
+
+.programsRowOne, .programsRowTwo {
+    margin-bottom: 30px;
+}
+
+.programsRowOne p, .programsRowTwo p {
+    color: #000000;
+    font-weight: 600;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.program {
+    transition: ease-out 0.3s;
+}
+
+.program:hover {
+    transition: ease-in 0.3s;
+    transform: scale(1.02);
+}
+
+
+/* Media Queries */
+
+/* Phone Styling */
+@media (max-width: 767px) {
+    #programs img {
+        margin-bottom: 30px;
+    }
+
+    .programsBtn {
+        margin-top: 10px;
+    }
+}

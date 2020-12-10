@@ -17,7 +17,11 @@
 
         {{!-- css links --}}
         <link rel="stylesheet" href="/css/main.css">
-        <link rel="stylesheet" href="/css/{{style}}.css">
+        {{#if home}}
+            {{#each styleSheets}}
+                <link rel="stylesheet" href="/css/index/{{this}}.css">
+            {{/each}}
+        {{/if}}
     </head>
 
     <body id='page'>
