@@ -151,9 +151,15 @@
 #people .carousel-caption {
     position: absolute;
     left: 50%;
-    top: 50%;
+    top: 60%;
     transform: translate(-50%, -50%);
     width: 80%;
+}
+
+.mobileReview {
+    color: black;
+    display: none;
+    text-align: center;
 }
 
 #follow div {
@@ -217,6 +223,18 @@
 
     .programsBtn {
         margin-top: 10px;
+    }
+
+    #people {
+        margin-bottom: 10px;
+    }
+
+    .overlay, .peopleCaption {
+        display: none;
+    }
+
+    .mobileReview {
+        display: block;
     }
 
     #follow div {
