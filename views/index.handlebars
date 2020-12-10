@@ -1,3 +1,4 @@
+{{!-- Carousel underneath the navbar --}}
 <div id="firstCarousel" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
         <li data-target="#firstCarousel" data-slide-to="0" class="indicator active"></li>
@@ -6,6 +7,7 @@
     </ol>
 
     <div class="carousel-inner">
+        {{!-- First Item --}}
         <div class="carousel-item active">
             <img src="https://via.placeholder.com/1440x768" class="d-block w-100" alt="...">
             
@@ -14,6 +16,8 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
         </div>
+
+        {{!-- Second Item --}}
         <div class="carousel-item">
             <img src="https://via.placeholder.com/1440x768" class="d-block w-100" alt="...">
 
@@ -22,6 +26,8 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
         </div>
+
+        {{!-- Third Item --}}
         <div class="carousel-item">
             <img src="https://via.placeholder.com/1440x768" class="d-block w-100" alt="...">
 
@@ -33,9 +39,14 @@
     </div>
 </div>
 
+
+{{!-- Mission section --}}
 <div id="mission">
     <div class="container">
+        {{!-- Title --}}
         <h3>Mission</h3>
+
+        {{!-- Text --}}
         <p>
             The association of Religious Communities (ARC) was founded over 4 decades ago with the purpose of
             facilitating interfaith cooperation in the Danbury area. Centered in our respective faiths, ARC continues to
@@ -43,22 +54,36 @@
             Danbury community.
         </p>
 
+        {{!-- Religion logos --}}
         <div id="religions">
+            {{!-- Cross --}}
             <i class="fas fa-cross fa-3x"></i>
+
+            {{!-- Dharmachakra --}}
             <i class="fas fa-dharmachakra fa-3x"></i>
+
+            {{!-- Star of David --}}
             <i class="fas fa-star-of-david fa-3x"></i>
+
+            {{!-- Star and Crescent Moon --}}
             <i class="fas fa-star-and-crescent fa-3x"></i>
         </div>
 
+        {{!-- Read Our Story button --}}
         <a class="missionBtn" href="#">Read Our Story</a>
     </div>
 </div>
 
+
+{{!-- Accomplishments Section --}}
 <div id="accomplishments">
     <div class="container">
+        {{!-- Title --}}
         <h3>2019 Accomplishments</h3>
 
         <div class="row accompRow">
+
+            {{!-- Food --}}
             <div class="col-md-3 accompCard">
                 <i class="fas fa-utensils fa-5x"></i>
 
@@ -69,6 +94,7 @@
                 </p>
             </div>
 
+            {{!-- Home --}}
             <div class="col-md-3 accompCard">
                 <i class="fas fa-home fa-5x"></i>
 
@@ -79,6 +105,7 @@
                 </p>
             </div>
 
+            {{!-- Medical --}}
             <div class="col-md-3 accompCard">
                 <i class="fas fa-medkit fa-5x"></i>
 
@@ -90,81 +117,110 @@
             </div>
         </div>
 
+        {{!-- More About Our Work button --}}
         <a class="accompBtn" href="#">More About Our Work</a>
     </div>
 </div>
 
+
+{{!-- Our Programs Section --}}
 <div id="programs">
     <div class="container">
+        {{!-- Title --}}
         <h3>Our Programs</h3>
 
+        {{!-- First Row --}}
         <div class="row programsRowOne">
+
+            {{!-- First Program --}}
             <div class="col-md-3 program">
                 <a href="#">
                     <img src="https://via.placeholder.com/234x268" alt="...">
+
                     <p>Comida Program</p>
                 </a>
             </div>
 
+            {{!-- Second Program --}}
             <div class="col-md-3 program">
                 <a href="#">
                     <img src="https://via.placeholder.com/234x268" alt="...">
+
                     <p>Dream Homes Community Center</p>
                 </a>
             </div>
 
+            {{!-- Third Program --}}
             <div class="col-md-3 program">
                 <a href="#">
                     <img src="https://via.placeholder.com/234x268" alt="...">
+
                     <p>Emergency Aid Network</p>
                 </a>
             </div>
             
+            {{!-- Fourth Program --}}
             <div class="col-md-3 program">
                 <a href="#">
                     <img src="https://via.placeholder.com/234x268" alt="...">
+
                     <p>Interfaith Peace Camp</p>
                 </a>
             </div>
         </div>
 
+        {{!-- Second Row --}}
         <div class="row programsRowTwo">
+
+            {{!-- Fifth Program --}}
             <div class="col-md-3 program">
                 <a href="#">
                     <img src="https://via.placeholder.com/234x268" alt="...">
+
                     <p>Kids In Danbury</p>
                 </a>
             </div>
 
+            {{!-- Sixth Program --}}
             <div class="col-md-3 program">
                 <a href="#">
                     <img src="https://via.placeholder.com/234x268" alt="...">
+
                     <p>New Options to Violent Actions</p>
                 </a>
             </div>
 
+            {{!-- Seventh Program --}}
             <div class="col-md-3 program">
                 <a href="#">
                     <img src="https://via.placeholder.com/234x268" alt="...">
+
                     <p>Rapid Response Network</p>
                 </a>
             </div>
 
+            {{!-- Eighth Program --}}
             <div class="col-md-3 program">
                 <a href="#">
                     <img src="https://via.placeholder.com/234x268" alt="...">
+
                     <p>Refugee & Immigrant Resettlement Program</p>
                 </a>
             </div>
 
+            {{!-- Get Involved button --}}
             <a class="programsBtn" href="/involved">Get Involved</a>
         </div>
     </div>
 </div>
 
+
+{{!-- What People are Saying Section --}}
 <div id="people">
+    {{!-- Title --}}
     <h3>What People are Saying</h3>
 
+    {{!-- This carousel is right after the "Get Involved button" --}}
     <div id="secondCarousel" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
             <li data-target="#secondCarousel" data-slide-to="0" class="indicator active"></li>
@@ -173,62 +229,81 @@
         </ol>
 
         <div class="carousel-inner">
+            {{!-- First Item --}}
             <div class="carousel-item active">
-                <div class="mobileReview">
-                    <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4>
-                    <p>Placeholder label</p>
-                </div>
 
+                {{!-- Image --}}
                 <div class="overlay">
                     <img src="https://via.placeholder.com/1440x581" class="d-block w-100" alt="...">
                 </div>
                 
+                {{!-- Review --}}
                 <div class="carousel-caption peopleCaption">
-                    <h5>Placeholder label</h5>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <h5>Placeholder label</h5>
                 </div>
-            </div>
 
-            <div class="carousel-item">
+                {{!-- Review that's only viewable on mobile --}}
                 <div class="mobileReview">
                     <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4>
                     <p>Placeholder label</p>
                 </div>
-
-                <div class="overlay">
-                    <img src="https://via.placeholder.com/1440x581" class="d-block w-100" alt="...">
-                </div>
-
-                <div class="carousel-caption d-none d-md-block peopleCaption">
-                    <h5>Placeholder label</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </div>
             </div>
 
             <div class="carousel-item">
+
+                {{!-- Image --}}
+                <div class="overlay">
+                    <img src="https://via.placeholder.com/1440x581" class="d-block w-100" alt="...">
+                </div>
+                
+                {{!-- Review --}}
+                <div class="carousel-caption peopleCaption">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <h5>Placeholder label</h5>
+                </div>
+
+                {{!-- Review that's only viewable on mobile --}}
                 <div class="mobileReview">
                     <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4>
                     <p>Placeholder label</p>
                 </div>
+            </div>
 
+            <div class="carousel-item">
+
+                {{!-- Image --}}
                 <div class="overlay">
                     <img src="https://via.placeholder.com/1440x581" class="d-block w-100" alt="...">
                 </div>
-
-                <div class="carousel-caption d-none d-md-block peopleCaption">
-                    <h5>Placeholder label</h5>
+                
+                {{!-- Review --}}
+                <div class="carousel-caption peopleCaption">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <h5>Placeholder label</h5>
+                </div>
+
+                {{!-- Review that's only viewable on mobile --}}
+                <div class="mobileReview">
+                    <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4>
+                    <p>Placeholder label</p>
                 </div>
             </div>
         </div>
     </div>
 </div>
 
+
+{{!-- Follow Our Story section --}}
 <div id="follow">
+    {{!-- Title --}}
     <h3>Follow Our Journey</h3>
 
     <div>
+        {{!-- Youtube video --}}
         <iframe src="https://www.youtube.com/embed/sjAQER1Fa3A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        
+        {{!-- Twitter feed --}}
         <a class="twitter-timeline" data-height="450" data-theme="light" href="https://twitter.com/arc4peace?ref_src=twsrc%5Etfw">Tweets by arc4peace</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
 </div>
