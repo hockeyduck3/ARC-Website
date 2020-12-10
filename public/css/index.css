@@ -157,7 +157,7 @@
 }
 
 .mobileReview {
-    color: black;
+    color: #fff;
     display: none;
     text-align: center;
 }
@@ -184,7 +184,7 @@
         margin-bottom: 35px;
     }
 
-    .indicator {
+    #firstCarousel .indicator {
         display: none;
     }
 
@@ -226,7 +226,18 @@
     }
 
     #people {
-        margin-bottom: 10px;
+        border-radius: 5px;
+        margin: 0 auto 10px auto;
+        width: 95%;
+    }
+
+    #people h3 {
+        margin: 20px 0 30px 0;
+    }
+
+    #people .carousel-inner {
+        background-color: #9a9afa;
+        border-radius: 5px;
     }
 
     .overlay, .peopleCaption {
@@ -235,6 +246,7 @@
 
     .mobileReview {
         display: block;
+        padding: 50px 0;
     }
 
     #follow div {
