@@ -7,7 +7,7 @@ router.get('/', (req, page) => {
     page.render('index', {
         home: true,
         styleSheets: [
-            'index',
+            'essentials',
             'mission',
             'accomplishments',
             'programs',
