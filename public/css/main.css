@@ -259,15 +259,11 @@ form {
     }
 
     .mainLinks {
-        display: none;
+        margin-bottom: 30px;
     }
 
     .footerContact {
         width: 100%;
-    }
-
-    .secondaryLinks {
-        margin-bottom: 30px;
     }
 
     #map {

@@ -2,13 +2,13 @@
 #mission {
     text-align: center;
     width: 80%;
-    margin: 10px auto 50px auto;
+    margin: 40px auto;
 }
 
 /* Title */
 #mission h3 {
     font-weight: 800;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 /* Test */
@@ -33,6 +33,7 @@
 @media (max-width: 767px) {
     /* Entire Section */
     #mission {
+        margin: 0px auto 30px auto;
         width: 100%;
     }
 

@@ -17,8 +17,8 @@
 
 /* Media Queries */
 
-/* Phone Styling */
-@media (max-width: 767px) {
+/* Tablet Styling */
+@media (max-width: 991px) {
     #follow div {
         flex-direction: column;
         margin-bottom: 50px;
@@ -26,7 +26,15 @@
 
     #follow iframe {
         width: 90% !important;
-        height: 190px;
+        height: 375px;
         margin: 0 auto 30px auto;
+    }
+}
+
+
+/* Phone Styling */
+@media (max-width: 767px) {
+    #follow iframe {
+        height: 190px;
     }
 }
