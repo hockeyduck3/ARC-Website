@@ -193,6 +193,17 @@ form {
 
 /* Media Queries */
 
+/* This will allow the user to active the dropdown menu by hovering over it on Desktop, but not on mobile. */
+@media (hover: hover) {
+    .dropdown-menu {
+        margin: -0.125rem 0 0;
+    }
+    
+    .dropdown:hover>.dropdown-menu {
+        display: block;
+    }    
+}
+
 /* Tablets */
 @media (max-width: 991px) {
     .container {
