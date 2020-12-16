@@ -35,7 +35,7 @@ router.get('/gallery', (req, page) => {
     page.render('gallery', {
         gallery: true,
         styleSheets: [
-            'index'
+            'gallery'
         ]
     });
 });
