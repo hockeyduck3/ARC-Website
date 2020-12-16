@@ -17,9 +17,18 @@
 
         {{!-- css links --}}
         <link rel="stylesheet" href="/css/main.css">
+        
+        {{!-- If the user is on the homepage --}}
         {{#if home}}
             {{#each styleSheets}}
                 <link rel="stylesheet" href="/css/index/{{this}}.css">
+            {{/each}}
+        {{/if}}
+
+        {{!-- If the user is on the gallery page --}}
+        {{#if gallery}}
+            {{#each styleSheets}}
+                <link rel="stylesheet" href="/css/gallery/{{this}}.css">
             {{/each}}
         {{/if}}
     </head>

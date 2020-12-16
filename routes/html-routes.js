@@ -34,7 +34,9 @@ router.get('/programs', (req, page) => {
 router.get('/gallery', (req, page) => {
     page.render('gallery', {
         gallery: true,
-        style: 'gallery'
+        styleSheets: [
+            'index'
+        ]
     });
 });
 
