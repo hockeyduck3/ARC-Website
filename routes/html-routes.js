@@ -7,6 +7,7 @@ const fs = require('fs');
 router.get('/', (req, page) => {
     page.render('index', {
         home: true,
+        folderName: 'index',
         styleSheets: [
             'essentials',
             'mission',
@@ -21,7 +22,10 @@ router.get('/', (req, page) => {
 router.get('/about', (req, page) => {
     page.render('about', {
         about: true,
-        style: 'about'
+        folderName: 'about',
+        styleSheets: [
+            'serving'
+        ]
     });
 });
 
@@ -35,6 +39,7 @@ router.get('/programs', (req, page) => {
 router.get('/gallery', (req, page) => {
     page.render('gallery', {
         gallery: true,
+        folderName: 'gallery',
         styleSheets: [
             'gallery'
         ]

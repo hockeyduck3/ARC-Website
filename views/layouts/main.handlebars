@@ -18,19 +18,9 @@
         {{!-- css links --}}
         <link rel="stylesheet" href="/css/main.css">
         
-        {{!-- If the user is on the homepage --}}
-        {{#if home}}
-            {{#each styleSheets}}
-                <link rel="stylesheet" href="/css/index/{{this}}.css">
-            {{/each}}
-        {{/if}}
-
-        {{!-- If the user is on the gallery page --}}
-        {{#if gallery}}
-            {{#each styleSheets}}
-                <link rel="stylesheet" href="/css/gallery/{{this}}.css">
-            {{/each}}
-        {{/if}}
+        {{#each styleSheets}}
+            <link rel="stylesheet" href="/css/{{../folderName}}/{{this}}.css">
+        {{/each}}
     </head>
 
     <body id="page">
@@ -84,14 +74,14 @@
                                     About
                                 </a>
                             {{else}}
-                                <a class="nav-link dropdown-toggle" href="/about" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <a class="nav-link dropdown-toggle" href="" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     About
                                 </a>
                             {{/if}}
 
 
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item" href="#">Our Story</a>
+                                <a class="dropdown-item" href="/about">Our Story</a>
                                 <a class="dropdown-item" href="#">Press Room</a>
                                 <a class="dropdown-item" href="#">Blog: Forum on Faith</a>
                                 <a class="dropdown-item" href="#">Contact Us</a>
