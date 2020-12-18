@@ -5,6 +5,7 @@
 .overlay img {
     opacity: 0.5;
     position: relative;
+    margin-bottom: 50px;
 }
 
 .servingText h1 {

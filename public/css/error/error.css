@@ -1,0 +1,23 @@
+.error {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.error h1 {
+    color: #9a9afa;
+    font-size: 100px;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+
+.error h2 {
+    margin-bottom: 20px;
+}
+
+.error h4 {
+    margin-bottom: 100px;
+}
+
+.error strong {
+    font-size: 30px;
+}

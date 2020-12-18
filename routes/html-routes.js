@@ -3,31 +3,58 @@ const router = express.Router();
 const fs = require('fs');
 
 // Each route has a true boolean attached to it. This is for the navbar so the webpage knows which page is "active".
-// Each route also has a "style" attached. This will make it so each page can have it's own css file without needing to load in the others.
+
 router.get('/', (req, page) => {
-    page.render('index', {
-        home: true,
-        folderName: 'index',
-        styleSheets: [
-            'essentials',
-            'mission',
-            'accomplishments',
-            'programs',
-            'people',
-            'follow'
-        ]
+    // Each route will have this function around it. This function will grab all of the styleSheets before it loads the page.
+    fs.readdir('./public/css/index', (err, styleSheets) => {
+        // If there is an error on this page
+        if (err) {
+            // Log the error in the console
+            console.log(err);
+
+            // Render the error page with the code: index
+            page.render('error', {
+                code: 'index',
+                cssFolder: 'error',
+                styleSheets: ['error.css']
+            });
+        }
+        
+        // If there was no error
+        else {
+            // Render the page normally
+            page.render('index', {
+                home: true,
+                cssFolder: 'index',
+                styleSheets: styleSheets
+            });
+        }
     });
 });
 
+
 router.get('/about', (req, page) => {
-    page.render('about', {
-        about: true,
-        folderName: 'about',
-        styleSheets: [
-            'serving'
-        ]
+    fs.readdir('./public/css/about', (err,  styleSheets) => {
+        if (err) {
+            console.log(err);
+
+            page.render('error', {
+                code: 'about',
+                cssFolder: 'error',
+                styleSheets: ['error.css']
+            });
+        } 
+        
+        else {
+            page.render('about', {
+                about: true,
+                cssFolder: 'about',
+                styleSheets: styleSheets
+            });
+        };
     });
 });
+
 
 router.get('/programs', (req, page) => {
     page.render('programs', {
@@ -36,15 +63,29 @@ router.get('/programs', (req, page) => {
     });
 });
 
+
 router.get('/gallery', (req, page) => {
-    page.render('gallery', {
-        gallery: true,
-        folderName: 'gallery',
-        styleSheets: [
-            'gallery'
-        ]
+    fs.readdir('./public/css/gallery', (err, styleSheets) => {
+        if (err) {
+            console.log(err);
+
+            page.render('error', {
+                code: 'gallery',
+                cssFolder: 'error',
+                styleSheets: ['error.css']
+            })
+        } 
+        
+        else {
+            page.render('gallery', {
+                gallery: true,
+                cssFolder: 'gallery',
+                styleSheets: styleSheets
+            });
+        }
     });
 });
+
 
 router.get('/involved', (req, page) => {
     page.render('involved', {
@@ -57,41 +98,56 @@ router.get('/involved', (req, page) => {
 // Blog posts
 router.get('/press/:forum', (req, page) => {
     const url = req.params.forum;
-    let fileArray = [];
-    let fileName = '';
+    let fileFound = false;
 
     // Find each JSON file within this folder
-    fs.readdirSync('./routes/forums/').forEach(file => {
-        // Then add each file to the to fileArray
-        fileArray.push(file);
-    });
-    
-    for (let i = 0; i < fileArray.length; i++) {
-        // Check and see if any file matches the forum name in the url
-        if (fileArray[i].toLowerCase() === `${url.toLowerCase()}.json`) {
-            // If it does then grab that file and save it to the fileName variable
-            fileName = JSON.parse(fs.readFileSync(`./routes/forums/${fileArray[i]}`, 'utf-8'));
+    fs.readdir('./routes/forums/', (err, files) => {
+        if (err) {
+            console.log(err);
 
-            // Then break the loop and continue running the rest of the code
-            break;
+            page.render('error', {
+                code: 'blogs',
+                cssFolder: 'error',
+                styleSheets: ['error.css']
+            })
         }
-    }
 
-    // If there was a matching file found
-    if (fileName !== '') {
-        // Render the blog page
-        page.render('blog', {
-            about: true,
-            name: fileName.name,
-            text: fileName.text
-        });
-    } else {
-        // If there was no matching file then render the 404 page
-        page.render('404', {
-            errorTitle: 'Blog',
-            errorText: 'blog post'
-        });
-    }
+        else {
+            let fileArray = files;
+
+            for (let i = 0; i < fileArray.length; i++) {
+                // Check and see if any file matches the forum name in the url
+                if (fileArray[i].toLowerCase() === `${url.toLowerCase()}.json`) {
+                    fileFound = true;
+                    
+                    // If it does then grab that file and save it to the fileName variable
+                    fs.readFile(`./routes/forums/${fileArray[i]}`, (err, data) => {
+                        if (err) throw err;
+    
+                        let file = JSON.parse(data);
+    
+                        // Render the blog page
+                        page.render('blog', {
+                            about: true,
+                            name: file.name,
+                            text: file.text
+                        });
+                    });
+        
+                    // Then break the loop
+                    break;
+                }
+            }
+    
+            // If there was no matching file found
+            if (!fileFound) {
+                page.render('404', {
+                    errorTitle: 'Blog',
+                    errorText: 'blog post'
+                });
+            }
+        }
+    });
 });
 
 module.exports = router;
