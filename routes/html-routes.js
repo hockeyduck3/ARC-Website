@@ -4,6 +4,7 @@ const fs = require('fs');
 
 // Each route has a true boolean attached to it. This is for the navbar so the webpage knows which page is "active".
 
+// Index / Homepage
 router.get('/', (req, page) => {
     // Each route will have this function around it. This function will grab all of the styleSheets before it loads the page.
     fs.readdir('./public/css/index', (err, styleSheets) => {
@@ -33,6 +34,7 @@ router.get('/', (req, page) => {
 });
 
 
+// About
 router.get('/about', (req, page) => {
     fs.readdir('./public/css/about', (err,  styleSheets) => {
         if (err) {
@@ -64,6 +66,7 @@ router.get('/programs', (req, page) => {
 });
 
 
+// Gallery
 router.get('/gallery', (req, page) => {
     fs.readdir('./public/css/gallery', (err, styleSheets) => {
         if (err) {
