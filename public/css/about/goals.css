@@ -1,0 +1,38 @@
+.goals {
+    margin: 50px auto;
+    width: 85%;
+}
+
+.goalDiv {
+    margin-bottom: 50px;
+}
+
+.goals h2 {
+    color: #2F3061;
+    font-weight: 700;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+h5 {
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.goalBody, .goalBodyReverse {
+    display: flex;
+    flex-direction: row;
+}
+
+.goalBody img {
+    margin-right: 25px;
+}
+
+.goalBodyReverse img {
+    margin-left: 25px;
+}
+
+.goalBodyReverse {
+    flex-direction: row-reverse;
+}
