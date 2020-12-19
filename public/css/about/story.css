@@ -1,0 +1,12 @@
+.ourStory {
+    margin: 10px auto;
+    text-align: center;
+    width: 55%;
+}
+
+.ourStory h3 {
+    color: #2F3061;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
