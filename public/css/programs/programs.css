@@ -1,0 +1,22 @@
+.overlay {
+    background-color: rgba(47, 48, 97, 0.6);
+}
+
+.overlay img {
+    opacity: 0.5;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.programsText {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.programsText h1 {
+    color: #fff;
+    font-weight: 700;
+    font-size: 45px;
+}

@@ -59,10 +59,25 @@ router.get('/about', (req, page) => {
 
 
 router.get('/programs', (req, page) => {
-    page.render('programs', {
-        programs: true,
-        style: 'programs'
-    });
+    fs.readdir('./public/css/programs', (err, styleSheets) => {
+        if (err) {
+            console.log(err);
+
+            page.render('error', {
+                code: 'programs',
+                cssFolder: 'error',
+                styleSheets: ['error.css']
+            });
+        }
+
+        else {
+            page.render('programs', {
+                programs: true,
+                cssFolder: 'programs',
+                styleSheets: styleSheets
+            });
+        }
+    })
 });
 
 
