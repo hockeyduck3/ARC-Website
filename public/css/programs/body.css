@@ -1,20 +1,28 @@
-.overview {
+.overview, .purpose {
     margin-bottom: 80px;
 }
 
-.overview h2 {
+.overview h2, .purpose h2 {
     color: #2F3061;
     font-weight: 700;
     margin-bottom: 30px;
     text-align: center;
 }
 
-.overviewBody {
+.overviewBody, .purposeBody {
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 
+.purposeBody {
+    flex-direction: row-reverse;
+}
+
 .overviewBody img {
     margin-right: 50px;
+}
+
+.purposeBody img {
+    margin-left: 50px;
 }
