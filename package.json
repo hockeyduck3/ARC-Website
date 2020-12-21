@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "git": "git add . && git commit -m 'testing'"
+    "git": "git add . && git commit -m \"Testing new npm script \" && git push"
   },
   "repository": {
     "type": "git",
