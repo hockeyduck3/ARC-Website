@@ -106,9 +106,24 @@ router.get('/gallery', (req, page) => {
 
 
 router.get('/involved', (req, page) => {
-    page.render('involved', {
-        involved: true,
-        style: 'involved'
+    fs.readdir('./public/css/involved', (err, styleSheets) => {
+        if (err) {
+            console.log(err);
+
+            page.render('error', {
+                code: 'blogs',
+                cssFolder: 'error',
+                styleSheets: ['error.css']
+            });
+        }
+
+        else {
+            page.render('involved', {
+                involved: true,
+                cssFolder: 'involved',
+                styleSheets: styleSheets
+            });
+        }
     });
 });
 
@@ -127,7 +142,7 @@ router.get('/press/:forum', (req, page) => {
                 code: 'blogs',
                 cssFolder: 'error',
                 styleSheets: ['error.css']
-            })
+            });
         }
 
         else {
