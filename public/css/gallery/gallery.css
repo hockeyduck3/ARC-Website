@@ -29,3 +29,33 @@
 .imagesRow {
     margin-bottom: 100px;
 }
+
+.imagesRow img {
+    width: 100%;
+}
+
+
+/* Media Queries */
+
+/* Tablets */
+@media (max-width: 991px) {
+    .mainVideo iframe {
+        margin-bottom: 40px;
+    }
+    
+    .galleryRowOne, .galleryRowTwo, .galleryRowThree, .galleryRowFour {
+        margin: 0;
+    }
+
+    .col-md-4, .col-md-3 {
+        margin-bottom: 30px;
+    }
+
+    .galleryTitle, .instaTitle {
+        margin: 20px 0;
+    }
+
+    .imagesRow {
+        margin-bottom: 20px;
+    }
+}

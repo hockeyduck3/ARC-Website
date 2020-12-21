@@ -52,3 +52,29 @@ h2 {
     transform: scale(1.03);
     transition: ease-in 0.3s;
 }
+
+
+/* Media Queries */
+
+/* Tablets */
+@media (max-width: 991px) {
+    .overviewBody, .purposeBody, .getInvolvedBody {
+        flex-direction: column;
+    }
+
+    .overviewBody img, .purposeBody img, .getInvolvedBody img {
+        height: 55vw;
+        margin: 5%;
+    }
+
+    .overview p, .purpose p, .getInvolved p {
+        margin: 0 5%;
+    } 
+}
+
+/* Smaller phones */
+@media(max-width: 360px) {
+    h2 {
+        font-size: 26px;
+    }
+}

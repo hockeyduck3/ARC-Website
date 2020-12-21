@@ -1,10 +1,14 @@
+.servingImg {
+    position: relative;
+}
+
 .overlay {
     background-color: rgba(47, 48, 97, 0.6);
 }
 
 .overlay img {
     opacity: 0.5;
-    position: relative;
+    /* position: relative; */
     margin-bottom: 50px;
 }
 
@@ -16,8 +20,21 @@
 }
 
 .servingText {
+    width: 100%;
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -70%);
+}
+
+
+/* Media Queries */
+@media (max-width: 767px) {
+    .servingText {
+        transform: translate(-50%, -80%);
+    }
+
+    .servingText h1 {
+        font-size: 22px;
+    }
 }

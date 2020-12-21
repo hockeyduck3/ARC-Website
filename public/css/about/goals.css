@@ -36,3 +36,19 @@ h5 {
 .goalBodyReverse {
     flex-direction: row-reverse;
 }
+
+
+/* Media Queries */
+@media (max-width: 991px) {
+    .goalBody, .goalBodyReverse {
+        flex-direction: column;
+    }
+
+    .goalBody img, .goalBodyReverse img  {
+        margin: 3%;
+    }
+
+    .goalBody p, .goalBodyReverse p {
+        margin: 3%;
+    }
+}
