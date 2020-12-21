@@ -1,0 +1,61 @@
+.volunteer {
+    margin-bottom: 50px;
+}
+
+.volunteer h3 {
+    color: #2F3061;
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+.volunteer img {
+    opacity: 0.5;
+    width: 100%;
+}
+
+.opportunity p {
+    text-align: center;
+}
+
+.volunteerRowOne p, .volunteerRowTwo p {
+    color: #000000;
+    font-weight: 600;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.volunteerRowOne, .volunteerRowTwo {
+    margin-bottom: 30px;
+}
+
+.opportunity {
+    transition: ease-out 0.3s;
+}
+
+.opportunity:hover {
+    transition: ease-in 0.3s;
+    transform: scale(1.02);
+}
+
+/* Media Queries */
+
+/* Tablets */
+@media (max-width: 991px) {
+    .volunteer h3 {
+        text-align: center;
+    }
+}
+
+
+/* Mobile phones */
+@media (max-width: 767px) {
+    .volunteer h3 {
+        font-size: 24px;
+    }
+
+    .opportunity {
+        margin-bottom: 30px;
+    }
+}
