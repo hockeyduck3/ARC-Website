@@ -1,0 +1,31 @@
+.fourWrapper h1, .fourWrapper p {
+    text-align: center;
+}
+
+.fourWrapper h1 {
+    font-size: 70px;
+    margin-top: 40px;
+}
+
+.text {
+    font-size: 30px;
+    margin: 30px 0 50px 0;
+}
+
+span {
+    color: #9a9afa;
+}
+
+
+/* Media Queries */
+
+/* Mobile phones */
+@media (max-width: 767px) {
+    .fourWrapper h1 {
+        font-size: 30px;
+    }
+
+    .text {
+        font-size: 25px;
+    }
+}

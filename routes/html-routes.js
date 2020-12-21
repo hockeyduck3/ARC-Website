@@ -161,7 +161,9 @@ router.get('/press/:forum', (req, page) => {
             if (!fileFound) {
                 page.render('404', {
                     errorTitle: 'Blog',
-                    errorText: 'blog post'
+                    errorText: 'blog post',
+                    cssFolder: 'four',
+                    styleSheets: ['index.css']
                 });
             }
         }
