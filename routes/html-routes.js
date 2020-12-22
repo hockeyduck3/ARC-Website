@@ -131,6 +131,7 @@ router.get('/involved', (req, page) => {
 });
 
 
+// Contact
 router.get('/contact', (req, page) => {
     fs.readdir('./public/css/contact', (err, styleSheets) => {
         if (err) {
@@ -153,6 +154,51 @@ router.get('/contact', (req, page) => {
     });
 });
 
+
+// Press
+router.get('/press', (req, page) => {
+    fs.readdir('./routes/forums', (err, files) => {
+        if (err) {
+            console.log(err);
+
+            page.render('error',  {
+                code: 'press',
+                cssFolder: 'error',
+                styleSheets: ['error.css']
+            });
+        }
+
+        else {
+            let dataArray = [];
+
+            for (let i = 0; i < files.length; i++) {
+                fs.readFile(`./routes/forums/${files[i]}`, (err, data) => {
+                    if (err) {
+                        console.log(err);
+                    }
+
+                    let parsedData = JSON.parse(data);
+
+                    // Remove the JSON tag at the end of the file
+                    let newFileName = files[i].split('.').slice(0, -1).join('.');
+
+                    let saveData = {
+                        fileName: newFileName,
+                        name: parsedData.name,
+                        message: parsedData.message
+                    }
+
+                    dataArray.push(saveData);
+                })
+            }
+
+            page.render('press', {
+                about: true,
+                card: dataArray
+            });
+        }
+    });
+});
 
 // Blog posts
 router.get('/press/:forum', (req, page) => {
@@ -189,7 +235,7 @@ router.get('/press/:forum', (req, page) => {
                         page.render('blog', {
                             about: true,
                             name: file.name,
-                            text: file.text
+                            message: file.message
                         });
                     });
         
