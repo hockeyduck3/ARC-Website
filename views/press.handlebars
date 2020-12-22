@@ -1,5 +1,14 @@
-{{#each card}}
-    <h2>{{this.name}}</h2>
-    <h3>{{this.message}}...</h3>
-    <a href="/press/{{this.url}}">read more</a>
-{{/each}}
+<div class="container">
+    <div class="row">
+        {{#each card}}
+            <div class="col-md-4">
+                <img src="{{this.img}}" alt="...">
+
+                <p class="title">{{this.title}}</p>
+                <p class="date">{{this.date}}</p>
+                <p class="message">{{this.message}}...</p>
+                <a href="/press/{{url}}">Read more</a>
+            </div>
+        {{/each}}
+    </div>
+</div>

@@ -181,7 +181,9 @@ router.get('/press', (req, page) => {
 
                 let dataObj = {
                     url: urlLink,
-                    name: parsedData.name,
+                    title: parsedData.title,
+                    date: parsedData.date,
+                    img: parsedData.img,
                     message: parsedData.message.substring(0, 140)
                 }
 
@@ -230,7 +232,9 @@ router.get('/press/:forum', (req, page) => {
                         // Render the blog page
                         page.render('blog', {
                             about: true,
-                            name: file.name,
+                            title: file.title,
+                            date: file.date,
+                            img: file.img,
                             message: file.message
                         });
                     });
