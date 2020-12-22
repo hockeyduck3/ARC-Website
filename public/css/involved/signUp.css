@@ -1,0 +1,73 @@
+.signUp .form-group {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+
+.signUp h3 {
+    color: #2F3061;
+    font-weight: 700;
+}
+
+.signUp .form-group p {
+    font-weight: 600;
+}
+
+.redStar {
+    color: red;
+}
+
+.optional {
+    color: slategrey;
+    font-weight: 100;
+}
+
+.signUp input, .signUp textarea {
+    background-color: rgba(196, 196, 196, 0.3);
+    border-radius: 5px;
+    border: 1px solid rgb(128, 128, 128);
+}
+
+.signUp input {
+    margin-bottom: 35px;
+}
+
+.signUp #emailInput {
+    width: 100%;
+}
+
+.submitBtn {
+    background-color: #9a9afa;
+    border-radius: 4px;
+    box-shadow: 0px 2px 4px 0px #9a9afa;
+    color: #fff;
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 40px auto 30px auto;
+    padding: .5rem 1rem;
+    transition: ease-out 0.3s;
+    width:100%;
+}
+
+.submitBtn:hover {
+    color: #fff;
+    text-decoration: none;
+    transform: scale(1.03);
+    transition: ease-in 0.3s;
+}
+
+
+/* Media Queries */
+
+/* Mobile phones */
+@media (max-width: 767px) {
+    .signUp h3 {
+        text-align: center;
+    }
+
+    .signUp .form-group {
+        margin-top: 25px;
+        width: 100%;
+    }
+}

@@ -51,6 +51,10 @@
 
 /* Mobile phones */
 @media (max-width: 767px) {
+    .volunteer {
+        margin-bottom: 0;
+    }
+
     .volunteer h3 {
         font-size: 24px;
     }
