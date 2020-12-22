@@ -158,41 +158,59 @@ router.get('/contact', (req, page) => {
 
 // Press
 router.get('/press', (req, page) => {
-    fs.readdir('./routes/forums', (err, files) => {
+    fs.readdir('./public/css/press', (err, styleSheets) => {
+        // press-style error
         if (err) {
             console.log(err);
 
-            page.render('error',  {
-                code: 'press',
+            page.render('error', {
+                code: 'press-style',
                 cssFolder: 'error',
                 styleSheets: ['error.css']
             });
         }
-
+        
         else {
-            let dataArray = [];
-
-            files.forEach(file => {
-                let urlLink = file.split('.').splice(0, 1).join('.');
-
-                let data = fs.readFileSync(`./routes/forums/${file}`);
-
-                let parsedData = JSON.parse(data);
-
-                let dataObj = {
-                    url: urlLink,
-                    title: parsedData.title,
-                    date: parsedData.date,
-                    img: parsedData.img,
-                    message: parsedData.message.substring(0, 140)
+            fs.readdir('./routes/forums', (err, files) => {
+                // press-forums error
+                if (err) {
+                    console.log(err);
+        
+                    page.render('error',  {
+                        code: 'press-forums',
+                        cssFolder: 'error',
+                        styleSheets: ['error.css']
+                    });
                 }
-
-                dataArray.unshift(dataObj);
-            });
-
-            page.render('press', {
-                about: true,
-                card: dataArray
+        
+                else {
+                    let dataArray = [];
+        
+                    files.forEach(file => {
+                        let urlLink = file.split('.').splice(0, 1).join('.');
+        
+                        let data = fs.readFileSync(`./routes/forums/${file}`);
+        
+                        let parsedData = JSON.parse(data);
+        
+                        let dataObj = {
+                            url: urlLink,
+                            title: parsedData.title,
+                            date: parsedData.date,
+                            img: parsedData.img,
+                            message: parsedData.message.substring(0, 140)
+                        }
+        
+                        dataArray.unshift(dataObj);
+                    });
+        
+                    page.render('press', {
+                        about: true,
+                        cssFolder: 'press',
+                        styleSheets: styleSheets,
+                        card: dataArray
+                    });
+                }
             });
         }
     });
