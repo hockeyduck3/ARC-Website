@@ -1,0 +1,75 @@
+.contactBody h3 {
+    color: #2F3061;
+    font-weight: 700;
+    margin: 0 0 15px 15px;
+}
+
+.contactContainer, .contactForm {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.contactForm {
+    width: 60%;
+}
+
+.contactInfo {
+    margin-top: 40px;
+    width: 40%;
+}
+
+.contactInfo p {
+    font-weight: 600;
+}
+
+.contactForm .form-group {
+    flex-direction: column;
+}
+
+#contactMap {
+    height: 27vw;
+    width: 100%;
+}
+
+
+/* Media Queries */
+
+/* Tablets */
+@media (max-width: 991px) {
+    .contactBody h3 {
+        font-size: 25px;
+        margin: 0 0 25px 0;
+        text-align: center;
+    }
+
+    #contactMap {
+        height: 37vw;
+    }
+}
+
+
+/* Mobile phones */
+@media (max-width: 767px) {
+    .contactBody h3 {
+        font-size: 23px;
+    }
+
+    .contactContainer, .contactForm {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .contactForm, .contactInfo {
+        width: 100%;
+    }
+
+    .contactInfo {
+        text-align: center;
+    }
+
+    #contactMap {
+        height: 75vw;
+        margin-bottom: 50px;
+    }
+}

@@ -1,0 +1,70 @@
+.contactForm form {
+    width: 75%;
+}
+
+.contactForm .form-group p {
+    font-weight: 600;
+}
+
+.redStar {
+    color: red;
+}
+
+.optional {
+    color: slategrey;
+    font-weight: 100;
+}
+
+.contactForm input, .contactForm textarea {
+    background-color: rgba(196, 196, 196, 0.3);
+    border-radius: 5px;
+    border: 1px solid rgb(128, 128, 128);
+}
+
+.contactForm input {
+    margin-bottom: 35px;
+}
+
+.contactForm #emailInput {
+    width: 100%;
+}
+
+.submitBtn {
+    background-color: #9a9afa;
+    border-radius: 4px;
+    box-shadow: 0px 2px 4px 0px #9a9afa;
+    color: #fff;
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 40px auto 30px auto;
+    padding: .5rem 1rem;
+    transition: ease-out 0.3s;
+    width:100%;
+}
+
+.submitBtn:hover {
+    color: #fff;
+    text-decoration: none;
+    transform: scale(1.03);
+    transition: ease-in 0.3s;
+}
+
+
+/* Media Queries */
+
+/* Mobile phones */
+@media (max-width: 767px) {
+    .contactForm .form-group {
+        margin-top: 25px;
+        width: 100%;
+    }
+
+    .contactForm form {
+        width: 100%;
+    }
+
+    .submitBtn {
+        margin-bottom: 0;
+    }
+}

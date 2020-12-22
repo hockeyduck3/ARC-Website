@@ -124,7 +124,7 @@ router.get('/involved', (req, page) => {
                 involved: true,
                 cssFolder: 'involved',
                 styleSheets: styleSheets,
-                javascript: 'involved.js'
+                javascript: 'forms.js'
             });
         }
     });
@@ -147,7 +147,8 @@ router.get('/contact', (req, page) => {
             page.render('contact', {
                 about: true,
                 cssFolder: 'contact',
-                styleSheets: styleSheets
+                styleSheets: styleSheets,
+                javascript: 'forms.js'
             });
         }
     });
