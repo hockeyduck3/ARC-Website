@@ -1,12 +1,18 @@
 .signUp .form-group {
     display: flex;
     flex-direction: column;
-    width: 40%;
+    width: 45%;
 }
 
 .signUp h3 {
     color: #2F3061;
     font-weight: 700;
+}
+
+.signUp img {
+    float: right;
+    margin: 50px 0;
+    width: 46%;
 }
 
 .signUp .form-group p {
@@ -62,6 +68,10 @@
 
 /* Mobile phones */
 @media (max-width: 767px) {
+    .signUp img {
+        display: none;
+    }
+
     .signUp h3 {
         text-align: center;
     }
