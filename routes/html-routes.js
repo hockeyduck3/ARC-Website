@@ -121,7 +121,8 @@ router.get('/involved', (req, page) => {
             page.render('involved', {
                 involved: true,
                 cssFolder: 'involved',
-                styleSheets: styleSheets
+                styleSheets: styleSheets,
+                javascript: 'involved.js'
             });
         }
     });
