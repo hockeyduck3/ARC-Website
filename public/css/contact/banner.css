@@ -1,0 +1,52 @@
+.contactBanner {
+    position: relative;
+}
+
+.overlay {
+    background-color: rgba(47, 48, 97, 0.6);
+}
+
+.overlay img {
+    opacity: 0.5;
+    margin-bottom: 50px;
+}
+
+.contactText {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -80%);
+    width: 100%;
+}
+
+.contactText h1 {
+    color: #fff;
+    font-weight: 700;
+    font-size: 45px;
+    text-align: center;
+}
+
+/* Media Queries */
+
+/* Mobile phones */
+@media (max-width: 767px) {
+    .contactText {
+        top: 45%;
+    }
+    
+    .contactText h1 {
+        font-size: 25px;
+    }
+}
+
+
+/* Smaller phones */
+@media (max-width: 360px) {
+    .contactText {
+        top: 43%;
+    }
+    
+    .contactText h1 {
+        font-size: 21px;
+    }
+}

@@ -58,6 +58,7 @@ router.get('/about', (req, page) => {
 });
 
 
+// Programs
 router.get('/programs', (req, page) => {
     fs.readdir('./public/css/programs', (err, styleSheets) => {
         if (err) {
@@ -105,6 +106,7 @@ router.get('/gallery', (req, page) => {
 });
 
 
+// Get Involved
 router.get('/involved', (req, page) => {
     fs.readdir('./public/css/involved', (err, styleSheets) => {
         if (err) {
@@ -123,6 +125,29 @@ router.get('/involved', (req, page) => {
                 cssFolder: 'involved',
                 styleSheets: styleSheets,
                 javascript: 'involved.js'
+            });
+        }
+    });
+});
+
+
+router.get('/contact', (req, page) => {
+    fs.readdir('./public/css/contact', (err, styleSheets) => {
+        if (err) {
+            console.log(err);
+
+            page.render('error', {
+                code: 'contact',
+                cssFolder: 'error',
+                styleSheets: ['error.css']
+            });
+        }
+
+        else {
+            page.render('contact', {
+                about: true,
+                cssFolder: 'contact',
+                styleSheets: styleSheets
             });
         }
     });
