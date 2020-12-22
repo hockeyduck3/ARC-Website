@@ -172,26 +172,21 @@ router.get('/press', (req, page) => {
         else {
             let dataArray = [];
 
-            for (let i = 0; i < files.length; i++) {
-                fs.readFile(`./routes/forums/${files[i]}`, (err, data) => {
-                    if (err) {
-                        console.log(err);
-                    }
+            files.forEach(file => {
+                let urlLink = file.split('.').splice(0, 1).join('.');
 
-                    let parsedData = JSON.parse(data);
+                let data = fs.readFileSync(`./routes/forums/${file}`);
 
-                    // Remove the JSON tag at the end of the file
-                    let newFileName = files[i].split('.').slice(0, -1).join('.');
+                let parsedData = JSON.parse(data);
 
-                    let saveData = {
-                        fileName: newFileName,
-                        name: parsedData.name,
-                        message: parsedData.message
-                    }
+                let dataObj = {
+                    url: urlLink,
+                    name: parsedData.name,
+                    message: parsedData.message.substring(0, 140)
+                }
 
-                    dataArray.push(saveData);
-                })
-            }
+                dataArray.unshift(dataObj);
+            });
 
             page.render('press', {
                 about: true,
