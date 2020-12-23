@@ -24,6 +24,15 @@ h1 {
     width: 100%;
 }
 
+.pressCard a {
+    color: #9A9AFA;
+}
+
+.pressCard a:hover {
+    color: rgb(47,48,97,1);
+    text-decoration: none;
+}
+
 .title {
     font-size: 15px;
     font-weight: 600;

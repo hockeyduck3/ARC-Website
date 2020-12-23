@@ -9,6 +9,8 @@ router.get('/', (req, page) => {
     // Each route will have this function around it. This function will grab all of the styleSheets before it loads the page.
     fs.readdir('./public/css/index', (err, styleSheets) => {
         // If there is an error on this page
+
+        // index error
         if (err) {
             // Log the error in the console
             console.log(err);
@@ -37,6 +39,7 @@ router.get('/', (req, page) => {
 // About
 router.get('/about', (req, page) => {
     fs.readdir('./public/css/about', (err,  styleSheets) => {
+        // about error
         if (err) {
             console.log(err);
 
@@ -61,6 +64,7 @@ router.get('/about', (req, page) => {
 // Programs
 router.get('/programs', (req, page) => {
     fs.readdir('./public/css/programs', (err, styleSheets) => {
+        // pregrams error
         if (err) {
             console.log(err);
 
@@ -85,6 +89,7 @@ router.get('/programs', (req, page) => {
 // Gallery
 router.get('/gallery', (req, page) => {
     fs.readdir('./public/css/gallery', (err, styleSheets) => {
+        // gallery error
         if (err) {
             console.log(err);
 
@@ -109,11 +114,12 @@ router.get('/gallery', (req, page) => {
 // Get Involved
 router.get('/involved', (req, page) => {
     fs.readdir('./public/css/involved', (err, styleSheets) => {
+        // involved error
         if (err) {
             console.log(err);
 
             page.render('error', {
-                code: 'blogs',
+                code: 'involved',
                 cssFolder: 'error',
                 styleSheets: ['error.css']
             });
@@ -134,6 +140,7 @@ router.get('/involved', (req, page) => {
 // Contact
 router.get('/contact', (req, page) => {
     fs.readdir('./public/css/contact', (err, styleSheets) => {
+        // contact error
         if (err) {
             console.log(err);
 
@@ -221,56 +228,74 @@ router.get('/press/:forum', (req, page) => {
     const url = req.params.forum;
     let fileFound = false;
 
-    // Find each JSON file within this folder
-    fs.readdir('./routes/forums/', (err, files) => {
+    fs.readdir('./public/css/blogs', (err, styleSheets) => {
+        // blogs-style error
         if (err) {
             console.log(err);
 
             page.render('error', {
-                code: 'blogs',
+                code: 'blogs-style',
                 cssFolder: 'error',
                 styleSheets: ['error.css']
             });
         }
 
         else {
-            let fileArray = files;
+            // Find each JSON file within this folder
+            fs.readdir('./routes/forums/', (err, files) => {
+                // blogs error
+                if (err) {
+                    console.log(err);
 
-            for (let i = 0; i < fileArray.length; i++) {
-                // Check and see if any file matches the forum name in the url
-                if (fileArray[i].toLowerCase() === `${url.toLowerCase()}.json`) {
-                    fileFound = true;
-                    
-                    // If it does then grab that file and save it to the fileName variable
-                    fs.readFile(`./routes/forums/${fileArray[i]}`, (err, data) => {
-                        if (err) throw err;
-    
-                        let file = JSON.parse(data);
-    
-                        // Render the blog page
-                        page.render('blog', {
-                            about: true,
-                            title: file.title,
-                            date: file.date,
-                            img: file.img,
-                            message: file.message
-                        });
+                    page.render('error', {
+                        code: 'blogs',
+                        cssFolder: 'error',
+                        styleSheets: ['error.css']
                     });
-        
-                    // Then break the loop
-                    break;
                 }
-            }
-    
-            // If there was no matching file found
-            if (!fileFound) {
-                page.render('404', {
-                    errorTitle: 'Blog',
-                    errorText: 'blog post',
-                    cssFolder: 'four',
-                    styleSheets: ['index.css']
-                });
-            }
+
+                else {
+                    let fileArray = files;
+
+                    for (let i = 0; i < fileArray.length; i++) {
+                        // Check and see if any file matches the forum name in the url
+                        if (fileArray[i].toLowerCase() === `${url.toLowerCase()}.json`) {
+                            fileFound = true;
+                            
+                            // If it does then grab that file and save it to the fileName variable
+                            fs.readFile(`./routes/forums/${fileArray[i]}`, (err, data) => {
+                                if (err) throw err;
+            
+                                let file = JSON.parse(data);
+            
+                                // Render the blog page
+                                page.render('blog', {
+                                    about: true,
+                                    cssFolder: 'blogs',
+                                    styleSheets: styleSheets,
+                                    title: file.title,
+                                    date: file.date,
+                                    img: file.img,
+                                    message: file.message
+                                });
+                            });
+                
+                            // Then break the loop
+                            break;
+                        }
+                    }
+            
+                    // If there was no matching file found
+                    if (!fileFound) {
+                        page.render('404', {
+                            errorTitle: 'Blog',
+                            errorText: 'blog post',
+                            cssFolder: 'four',
+                            styleSheets: ['index.css']
+                        });
+                    }
+                }
+            });
         }
     });
 });
