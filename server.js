@@ -1,5 +1,6 @@
 const express = require('express');
 const expressHandlebars = require('express-handlebars');
+require('dotenv').config();
 
 const server = express();
 
