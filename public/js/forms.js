@@ -24,3 +24,27 @@ $('.submitBtn').click(event => {
         console.log('Post sent');
     });
 });
+
+$('.form-control').on('keyup', (event) => {
+    let element = `#${event.target.id}`;
+    let star;
+    
+    switch (element) {
+        case '#firstNameInput':
+            star = '.starOne'
+            break;
+        
+        case '#lastNameInput':
+            star = '.starTwo'
+            break;
+        
+        default:
+            star = '.starThree'
+    }
+
+    if ($(element).val().length === 0) {
+        $(star).fadeIn('slow');
+    } else {
+        $(star).fadeOut('slow');
+    }
+});
