@@ -13,7 +13,7 @@
 }
 
 #programs img {
-    opacity: 0.2;
+    opacity: 0.5;
     width: 100%;
 }
 
@@ -24,6 +24,7 @@
 .programsRowOne p, .programsRowTwo p {
     color: #000000;
     font-weight: 600;
+    font-size: 25px;
     position: absolute;
     left: 50%;
     top: 50%;

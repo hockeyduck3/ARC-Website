@@ -5,6 +5,11 @@
     width: 7px;
 }
 
+#firstCarousel, #secondCarousel {
+    min-height: 40vw;
+    max-height: 40vw;
+}
+
 
 /* This styling for the "Read Our Story", "More About Our Work", and "getInvolved" buttons */
 .missionBtn, .accompBtn, .programsBtn {

@@ -10,7 +10,7 @@
 }
 
 #people img {
-    opacity: 0.2;
+    opacity: 0.5;
 }
 
 .overlay {
@@ -20,9 +20,13 @@
 #people .carousel-caption {
     position: absolute;
     left: 50%;
-    top: 60%;
-    transform: translate(-50%, -50%);
+    top: 50%;
+    transform: translate(-50%, 15vw);
     width: 80%;
+}
+
+.peopleCaption p {
+    font-size: 20px;
 }
 
 /* Styling for the mobile only review in the people section */
@@ -49,6 +53,10 @@
     #people .carousel-inner {
         background-color: #9a9afa;
         border-radius: 5px;
+    }
+
+    .carousel-indicators {
+        top: 100%;
     }
 
     /* On mobile the regular carousel with the pictures and captions are replaced by the mobile review div */
