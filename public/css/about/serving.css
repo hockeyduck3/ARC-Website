@@ -3,12 +3,11 @@
 }
 
 .overlay {
-    background-color: rgba(47, 48, 97, 0.6);
+    background-color: rgba(47, 48, 97, 0.8);
 }
 
 .overlay img {
     opacity: 0.5;
-    /* position: relative; */
     margin-bottom: 50px;
 }
 

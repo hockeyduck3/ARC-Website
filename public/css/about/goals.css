@@ -27,10 +27,12 @@ h5 {
 
 .goalBody img {
     margin-right: 25px;
+    width: 25%;
 }
 
 .goalBodyReverse img {
     margin-left: 25px;
+    width: 25%;
 }
 
 .goalBodyReverse {
@@ -45,7 +47,8 @@ h5 {
     }
 
     .goalBody img, .goalBodyReverse img  {
-        margin: 3%;
+        margin: 0;
+        width: 100%;
     }
 
     .goalBody p, .goalBodyReverse p {
