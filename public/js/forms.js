@@ -10,7 +10,15 @@ $('.submitBtn').click(event => {
     let lastName = $('#lastNameInput').val().trim();
     let fullName = `${firstName} ${lastName}`;
     let email = $('#emailInput').val().trim();
-    let message = $('#textInput').val().trim();
+    let text = $('#textInput').val().trim();
+    let message;
+
+    // Check to see if the user left a message or not
+    if (text === '') {
+        message = `${firstName} did not leave a message.`;
+    } else {
+        message = `Here is your message from ${firstName}, ${text}`
+    }
 
     // Array for checking for errors
     let errorTestArr = ['#firstNameInput', '#lastNameInput', '#emailInput'];
@@ -23,13 +31,17 @@ $('.submitBtn').click(event => {
         }
     }
 
-    // If there are no errors, send the email
+    // If there are no errors
     if (!anyErrors) {
+        // Set the loader to the sending animation
         $('.submitBtn')
             .html('Sending <div class="loader"></div>')
-            .prop('disabled', true)
             .removeClass('hover');
 
+        // Disable all the input fields and the submit button
+        $('#firstNameInput, #lastNameInput, #emailInput, #textInput, .submitBtn').prop('disabled', true);
+
+        // Create a data object with everything the user typed in
         const data = {
             fullName: fullName,
             firstName: firstName,
@@ -38,13 +50,33 @@ $('.submitBtn').click(event => {
             message: message
         }
 
-        // $.ajax({
-        //     url: '/api/contact',
-        //     method: 'POST',
-        //     data: data
-        // }).then(() => {
-        //     console.log('Post sent');
-        // });
+        // Send the email
+        $.ajax({
+            url: '/api/mail',
+            method: 'POST',
+            data: data
+        }).then((info) => {
+            // If the email was succesfully sent
+            if (info.response.includes('250')) {
+                // Let the user know
+                $('.submitBtn').html('Message Sent!');
+            } 
+            
+            // If there was an error
+            else {
+                // Alert the user
+                alert(`There has been an error sending your message. Code: ${info.responseCode}.`)
+
+                // Reset the submit button
+                $('.submitBtn')
+                    .css('color', '#fff')
+                    .html('Submit')
+                    .addClass('hover');
+
+                // Re-enable all the input fields and the submit button
+                $('#firstNameInput, #lastNameInput, #emailInput, #textInput, .submitBtn').prop('disabled', false);
+            }
+        });
     }
 });
 
