@@ -6,9 +6,9 @@ $('.submitBtn').click(event => {
     let anyErrors = false;
 
     // Variables needed for email data
-    let fullName = `${$('#firstNameInput').val().trim()} ${$('#lastNameInput').val().trim()}`;
     let firstName = $('#firstNameInput').val().trim();
     let lastName = $('#lastNameInput').val().trim();
+    let fullName = `${firstName} ${lastName}`;
     let email = $('#emailInput').val().trim();
     let message = $('#textInput').val().trim();
 
@@ -25,6 +25,11 @@ $('.submitBtn').click(event => {
 
     // If there are no errors, send the email
     if (!anyErrors) {
+        $('.submitBtn')
+            .html('Sending <div class="loader"></div>')
+            .prop('disabled', true)
+            .removeClass('hover');
+
         const data = {
             fullName: fullName,
             firstName: firstName,
@@ -32,14 +37,14 @@ $('.submitBtn').click(event => {
             email: email,
             message: message
         }
-    
-        $.ajax({
-            url: '/api/contact',
-            method: 'POST',
-            data: data
-        }).then(() => {
-            console.log('Post sent');
-        });
+
+        // $.ajax({
+        //     url: '/api/contact',
+        //     method: 'POST',
+        //     data: data
+        // }).then(() => {
+        //     console.log('Post sent');
+        // });
     }
 });
 
