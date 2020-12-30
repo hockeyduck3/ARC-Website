@@ -178,7 +178,7 @@ router.get('/press', (req, page) => {
         }
         
         else {
-            fs.readdir('./routes/forums', (err, files) => {
+            fs.readdir('./forums', (err, files) => {
                 // press-forums error
                 if (err) {
                     console.log(err);
@@ -242,7 +242,7 @@ router.get('/press/:forum', (req, page) => {
 
         else {
             // Find each JSON file within this folder
-            fs.readdir('./routes/forums/', (err, files) => {
+            fs.readdir('./forums/', (err, files) => {
                 // blogs error
                 if (err) {
                     console.log(err);
