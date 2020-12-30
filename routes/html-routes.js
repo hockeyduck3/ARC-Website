@@ -178,7 +178,7 @@ router.get('/press', (req, page) => {
         }
         
         else {
-            fs.readdir('./forums', (err, files) => {
+            fs.readdir('./public/forums', (err, files) => {
                 // press-forums error
                 if (err) {
                     console.log(err);
@@ -196,7 +196,7 @@ router.get('/press', (req, page) => {
                     files.forEach(file => {
                         let urlLink = file.split('.').splice(0, 1).join('.');
         
-                        let data = fs.readFileSync(`./routes/forums/${file}`);
+                        let data = fs.readFileSync(`./public/forums/${file}`);
         
                         let parsedData = JSON.parse(data);
         
@@ -242,7 +242,7 @@ router.get('/press/:forum', (req, page) => {
 
         else {
             // Find each JSON file within this folder
-            fs.readdir('./forums/', (err, files) => {
+            fs.readdir('./public/forums/', (err, files) => {
                 // blogs error
                 if (err) {
                     console.log(err);
@@ -263,7 +263,7 @@ router.get('/press/:forum', (req, page) => {
                             fileFound = true;
                             
                             // If it does then grab that file and save it to the fileName variable
-                            fs.readFile(`./routes/forums/${fileArray[i]}`, (err, data) => {
+                            fs.readFile(`./public/forums/${fileArray[i]}`, (err, data) => {
                                 if (err) throw err;
             
                                 let file = JSON.parse(data);
