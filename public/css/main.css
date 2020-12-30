@@ -81,9 +81,16 @@ body {
 }
 
 .navbar-brand {
-    margin-left: 40px;
-    height: 80px;
     line-height: 70px;
+    width: 25%;
+}
+
+.navbar-brand img {
+    width: 100%;
+}
+
+.halfLogo {
+    display: none;
 }
 
 #page .navbar-toggler-icon {
@@ -218,6 +225,18 @@ form {
     }
 
     /* Navbar Queries */
+    .fullLogo {
+        display: none;
+    }
+
+    .halfLogo {
+        display: block;
+    }
+
+    .navbar-brand img {
+        width: 39%;
+    }
+
     .nav-link, #page .donateNav a, .signUpBtn {
         box-shadow: none;
         text-align: center;
@@ -252,6 +271,10 @@ form {
 /* Mobile phones */
 @media (max-width: 767px) {
     /* Navbars Queries */
+    .navbar-brand img {
+        width: 100%;
+    }
+
     .address, .socialMediaTop, .donateNav {
         display: none;
     }
@@ -271,9 +294,7 @@ form {
     }
 
     .navbar-brand {
-        height: 80px;
         line-height: 70px;
-        margin-left: 20px;
     }
 
 
