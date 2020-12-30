@@ -23,6 +23,10 @@ h2 {
     flex-direction: row-reverse;
 }
 
+.overviewBody img, .getInvolvedBody img, .purposeBody img {
+    width: 35%;
+}
+
 .overviewBody img, .getInvolvedBody img {
     margin-right: 50px;
 }
@@ -63,8 +67,8 @@ h2 {
     }
 
     .overviewBody img, .purposeBody img, .getInvolvedBody img {
-        height: 55vw;
-        margin: 5%;
+        margin: 2% auto;
+        width: 90%;
     }
 
     .overview p, .purpose p, .getInvolved p {
