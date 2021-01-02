@@ -1,3 +1,4 @@
+const { deepStrictEqual } = require('assert');
 const express = require('express');
 const router = express.Router();
 const fs = require('fs');
@@ -88,23 +89,61 @@ router.get('/programs', (req, page) => {
 
 // Gallery
 router.get('/gallery', (req, page) => {
-    fs.readdir('./public/css/gallery', (err, styleSheets) => {
-        // gallery error
+    // Read the youtube json file
+    fs.readFile('./public/youtube.json', (err, videoFiles) => {
+
+        // videos error
         if (err) {
             console.log(err);
 
             page.render('error', {
-                code: 'gallery',
+                code: 'videos',
                 cssFolder: 'error',
                 styleSheets: ['error.css']
-            })
-        } 
-        
+            });
+        }
+
         else {
-            page.render('gallery', {
-                gallery: true,
-                cssFolder: 'gallery',
-                styleSheets: styleSheets
+            // Parse the json file
+            const videos = JSON.parse(videoFiles);
+
+            // Change the main video link to an embeded link
+            const mainVideo = videos.Main.replace(/watch\?v=/g, 'embed/');
+
+            // An empty array for the other video links
+            const otherVideos = [];
+
+            // Loop through the other video links in the json file
+            videos.Others.forEach(video => {
+                // Set each link to be an embeded link
+                let newLink = video.replace(/watch\?v=/g, 'embed/');
+
+                // Add the new embeded link to the othersVideos array
+                otherVideos.unshift(newLink);
+            });
+
+            // Read the css files
+            fs.readdir('./public/css/gallery', (err, styleSheets) => {
+                // gallery error
+                if (err) {
+                    console.log(err);
+        
+                    page.render('error', {
+                        code: 'gallery',
+                        cssFolder: 'error',
+                        styleSheets: ['error.css']
+                    });
+                } 
+                
+                else {
+                    page.render('gallery', {
+                        gallery: true,
+                        cssFolder: 'gallery',
+                        styleSheets: styleSheets,
+                        main: mainVideo,
+                        video: otherVideos 
+                    });
+                }
             });
         }
     });

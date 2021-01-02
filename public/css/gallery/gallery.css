@@ -6,7 +6,7 @@
     margin: 50px 0 50px 25px;
 }
 
-.mainVideo, .galleryRowOne, .galleryRowTwo, .galleryRowThree, .galleryRowFour {
+.mainVideo, .galleryRow {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -18,11 +18,14 @@
     width:  97%;
 }
 
-.galleryRowOne, .galleryRowTwo, .galleryRowThree, .galleryRowFour {
+.galleryRow {
     margin: 45px 0;
 }
 
-.galleryRowOne img, .galleryRowTwo img, .galleryRowThree img, .galleryRowFour img {
+.galleryRow iframe {
+    box-shadow: 0px 0px 3px 1px #2F3061;
+    height: 25vh;
+    margin-bottom: 10%;
     width: 100%;
 }
 
@@ -41,9 +44,10 @@
 @media (max-width: 991px) {
     .mainVideo iframe {
         margin-bottom: 40px;
+        height: 27vh;
     }
     
-    .galleryRowOne, .galleryRowTwo, .galleryRowThree, .galleryRowFour {
+    .galleryRow {
         margin: 0;
     }
 

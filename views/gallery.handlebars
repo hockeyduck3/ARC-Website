@@ -4,63 +4,15 @@
 <div class="container">
     <div class="mainVideo">
         {{!-- Youtube video --}}
-        <iframe src="https://www.youtube.com/embed/sjAQER1Fa3A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe src={{main}} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
 
-    <div class="row galleryRowOne">
-        <div class="col-md-4">
-            <img src="https://via.placeholder.com/274x185" alt="...">
-        </div>
-
-        <div class="col-md-4">
-            <img src="https://via.placeholder.com/274x185" alt="...">
-        </div>
-        
-        <div class="col-md-4">
-            <img src="https://via.placeholder.com/274x185" alt="...">
-        </div>
-    </div>
-
-    <div class="row galleryRowTwo">
-        <div class="col-md-4">
-            <img src="https://via.placeholder.com/274x185" alt="...">
-        </div>
-
-        <div class="col-md-4">
-            <img src="https://via.placeholder.com/274x185" alt="...">
-        </div>
-        
-        <div class="col-md-4">
-            <img src="https://via.placeholder.com/274x185" alt="...">
-        </div>
-    </div>
-
-    <div class="row galleryRowThree">
-        <div class="col-md-4">
-            <img src="https://via.placeholder.com/274x185" alt="...">
-        </div>
-
-        <div class="col-md-4">
-            <img src="https://via.placeholder.com/274x185" alt="...">
-        </div>
-        
-        <div class="col-md-4">
-            <img src="https://via.placeholder.com/274x185" alt="...">
-        </div>
-    </div>
-
-    <div class="row galleryRowFour">
-        <div class="col-md-4">
-            <img src="https://via.placeholder.com/274x185" alt="...">
-        </div>
-
-        <div class="col-md-4">
-            <img src="https://via.placeholder.com/274x185" alt="...">
-        </div>
-        
-        <div class="col-md-4">
-            <img src="https://via.placeholder.com/274x185" alt="...">
-        </div>
+    <div class="row galleryRow">
+        {{#each video}}
+            <div class="col-md-4">
+                <iframe src={{this}} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        {{/each}}
     </div>
 </div>
 
