@@ -3,5 +3,39 @@
 }
 
 .blog img {
-    margin-right: 50px;
+    background-color: #9A9AFA;
+    border: 2px solid #9A9AFA;
+    border-radius: 5px;
+    float: left;
+    margin-right: 25px;
+    width: 30%;
+}
+
+.title {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.author {
+    color: #9A9AFA;
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.date {
+    font-size: 12px;
+}
+
+
+/* Media Queries */
+@media(max-width: 767px) {
+    .blog {
+        margin: 30px auto;
+    }
+
+    .blog img {
+        float: none;
+        margin: 0 auto 15px auto;
+        width: 100%;
+    }
 }

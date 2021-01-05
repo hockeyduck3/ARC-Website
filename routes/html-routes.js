@@ -2,6 +2,7 @@ const { deepStrictEqual } = require('assert');
 const express = require('express');
 const router = express.Router();
 const fs = require('fs');
+const { url } = require('inspector');
 
 // Each route has a true boolean attached to it. This is for the navbar so the webpage knows which page is "active".
 
@@ -233,18 +234,22 @@ router.get('/press', (req, page) => {
                     let dataArray = [];
         
                     files.forEach(file => {
+                        // This will take the ".json" off of the file name
                         let urlLink = file.split('.').splice(0, 1).join('.');
         
-                        let data = fs.readFileSync(`./public/forums/${file}`);
-        
-                        let parsedData = JSON.parse(data);
+                        // Read the incoming file and parse it
+                        let data = JSON.parse(fs.readFileSync(`./public/forums/${file}`));
+
+                        // Just in case the image has spaces in it this will make sure those spaces get added properly
+                        let img = data.img.replace(/ /g, "\\ ");
         
                         let dataObj = {
                             url: urlLink,
-                            title: parsedData.title,
-                            date: parsedData.date,
-                            img: parsedData.img,
-                            message: parsedData.message.substring(0, 140)
+                            title: data.title,
+                            date: data.date,
+                            img: img,
+                            // This will show the first 140 characters of the article
+                            message: data.paragraphs[0].substring(0, 140)
                         }
         
                         dataArray.unshift(dataObj);
@@ -313,9 +318,10 @@ router.get('/press/:forum', (req, page) => {
                                     cssFolder: 'blogs',
                                     styleSheets: styleSheets,
                                     title: file.title,
+                                    author: file.author,
                                     date: file.date,
                                     img: file.img,
-                                    message: file.message
+                                    paragraphs: file.paragraphs
                                 });
                             });
                 

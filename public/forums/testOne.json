@@ -1,6 +1,9 @@
 {
     "title": "Comida Program Feeds the Community",
-    "date": "Dec 22, 2020",
-    "img": "https://via.placeholder.com/320x200",
-    "message": "The Comida Program spent the weekend collecting supplies to be distributed to the local community this weekend with the help of volunteers"
+    "date": "Dec 23, 2020",
+    "author": "N/A",
+    "img": "../../img/ari.jpg",
+    "paragraphs": [
+        "The Comida Program spent the weekend collecting supplies to be distributed to the local community this weekend with the help of volunteers"
+    ] 
 }

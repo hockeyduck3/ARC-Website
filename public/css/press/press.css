@@ -19,16 +19,20 @@ h1 {
     margin: 30px;
 }
 
-.pressCard img {
-    max-height: 200px;
+.cardImage {
+    background-repeat: no-repeat;
+    background-position-y: 15%;
+    background-size: cover;
+    min-height: 200px;
+    height: 15vw;
     width: 100%;
 }
 
-.pressCard a {
+.link {
     color: #9A9AFA;
 }
 
-.pressCard a:hover {
+.link:hover {
     color: rgb(47,48,97,1);
     text-decoration: none;
 }
@@ -41,4 +45,8 @@ h1 {
 .date {
     font-size: 12px;
     font-weight: 100;
+}
+
+.title, .date, .message, .link {
+    margin: 5px;
 }

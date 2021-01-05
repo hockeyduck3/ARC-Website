@@ -1,8 +1,12 @@
 <div class="container blog">
-    <img src="{{img}}" alt="..." style="float: left;">
+    <img src="{{img}}" alt="...">
 
-    <h3>{{title}}</h3>
-    <h5>{{date}}</h5>
+    <h3 class="title">{{title}}</h3>
+    <p class="author">By {{author}}</p>
+    <p class="date">Published: {{date}}</p>
 
-    <p>{{message}}</p>
+
+    {{#each paragraphs}}
+        <p style="font-size: 18px;">{{this}}</p>
+    {{/each}}
 </div>
