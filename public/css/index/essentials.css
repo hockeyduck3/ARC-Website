@@ -5,14 +5,44 @@
     width: 7px;
 }
 
-#firstCarousel, #secondCarousel {
+#secondCarousel {
     min-height: 40vw;
     max-height: 40vw;
 }
 
 
+/* Banner styling */
+.indexBanner {
+    position: relative;
+}
+
+.indexOverlay {
+    background-color: rgb(47, 48, 97);
+}
+
+.indexOverlay img {
+    opacity: 0.6;
+    margin-bottom: 50px;
+}
+
+.indexText {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -80%);
+    width: 100%;
+}
+
+.indexText h1 {
+    color: #fff;
+    font-weight: 700;
+    font-size: 45px;
+    text-align: center;
+}
+
+
 /* This styling for the "Read Our Story", "More About Our Work", and "getInvolved" buttons */
-.missionBtn, .accompBtn, .programsBtn {
+.missionBtn, .accompBtn, .programsBtn, .indexDonateBtn {
     background-color: #9a9afa;
     border-radius: 4px;
     box-shadow: 0px 2px 4px 0px #9a9afa;
@@ -26,11 +56,18 @@
     width: 162px;
 }
 
+.indexDonateBtn {
+    font-size: 20px;
+    text-align: center;
+    margin: 5px auto;
+    width: 125px;
+}
+
 .accompBtn {
     width: 219px;
 }
 
-.missionBtn:hover, .accompBtn:hover, .programsBtn:hover {
+.missionBtn:hover, .accompBtn:hover, .programsBtn:hover, .indexDonateBtn:hover {
     color: #fff;
     text-decoration: none;
     transform: scale(1.03);
@@ -42,16 +79,16 @@
 
 /* Mobile */
 @media (max-width: 767px) {
-    /* Styling for the first carousel underneath the navbar. */
-    #firstCarousel {
-        margin-bottom: 35px;
-    }
-
-    #firstCarousel .indicator {
-        display: none;
-    }
-
     .missionBtn, .accompBtn {
         box-shadow: none;
+    }
+
+    .indexText h1 {
+        font-size: 25px;
+    }
+
+    .indexDonateBtn {
+        font-size: 18px;
+        width: 120px;
     }
 }
