@@ -34,20 +34,40 @@
 
 /* Tablets */
 @media (max-width: 991px) {
-    .mainVideo iframe {
+    .highlight iframe {
         margin-bottom: 40px;
-        height: 27vh;
+        height: 39vh;
     }
     
     .galleryRow {
         margin: 0;
     }
 
-    .col-md-4, .col-md-3 {
+    .galleryRow iframe {
+        height: 12vh;
+    }
+
+    .col-md-4 {
         margin-bottom: 30px;
     }
 
     .galleryTitle {
         margin: 20px 0;
+    }
+}
+
+
+/* Mobile phones */
+@media (max-width: 767px) {
+    .highlight iframe {
+        height: 28vh;
+    }
+
+    .galleryRow iframe {
+        height: 27vh;
+    }
+
+    .col-md-4 {
+        margin-bottom: 0%;
     }
 }
