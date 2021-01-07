@@ -15,7 +15,11 @@ server.use(express.json());
 server.use(express.static('public'));
 
 // Set the server engine to use handlebars, and set the layout to the main.handlebars file in the views/layouts folders
-server.engine('handlebars', expressHandlebars({ defaultLayout: 'main' }));
+server.engine('handlebars', expressHandlebars({ 
+    defaultLayout: 'main',
+    helpers: require('./utils/helpers')
+}));
+
 server.set('view engine', 'handlebars');
 
 const routes = require('./routes/html-routes');

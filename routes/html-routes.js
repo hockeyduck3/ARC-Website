@@ -1,8 +1,6 @@
-const { deepStrictEqual } = require('assert');
 const express = require('express');
 const router = express.Router();
 const fs = require('fs');
-const { url } = require('inspector');
 
 // Each route has a true boolean attached to it. This is for the navbar so the webpage knows which page is "active".
 
@@ -91,7 +89,7 @@ router.get('/programs', (req, page) => {
 // Gallery
 router.get('/gallery', (req, page) => {
     // Read the youtube json file
-    fs.readFile('./public/youtube.json', (err, videoFiles) => {
+    fs.readFile('./public/galleryMedia.json', (err, mediaFiles) => {
 
         // videos error
         if (err) {
@@ -106,21 +104,35 @@ router.get('/gallery', (req, page) => {
 
         else {
             // Parse the json file
-            const videos = JSON.parse(videoFiles);
+            const media = JSON.parse(mediaFiles);
+            let highlight;
 
-            // Change the main video link to an embeded link
-            const mainVideo = videos.Main.replace(/watch\?v=/g, 'embed/');
+            // Check to see if the highlight is a video
+            if (media.Main.includes('watch?v=')) {
+                // If it's a video link, change the main video link to an embeded link
+                highlight = media.Main.replace(/watch\?v=/g, 'embed/');
 
-            // An empty array for the other video links
-            const otherVideos = [];
+            } else {
+                // If it's an image, don't mess with it
+                highlight = media.Main;
+            }
 
-            // Loop through the other video links in the json file
-            videos.Others.forEach(video => {
-                // Set each link to be an embeded link
-                let newLink = video.replace(/watch\?v=/g, 'embed/');
 
-                // Add the new embeded link to the othersVideos array
-                otherVideos.unshift(newLink);
+            // An empty array for the other media
+            const otherMedia = [];
+
+            // Loop through the other media in the json file
+            media.Others.forEach(file => {
+                if (file.includes('watch?v=')) {
+                    // Set the file to be an embeded link
+                    let newFile = file.replace(/watch\?v=/g, 'embed/');
+
+                    // Add the new embeded link to the othersVideos array
+                    otherMedia.unshift(newFile);
+
+                } else {
+                    otherMedia.unshift(file);
+                }
             });
 
             // Read the css files
@@ -136,13 +148,13 @@ router.get('/gallery', (req, page) => {
                     });
                 } 
                 
-                else {
+                else {                    
                     page.render('gallery', {
                         gallery: true,
                         cssFolder: 'gallery',
                         styleSheets: styleSheets,
-                        main: mainVideo,
-                        video: otherVideos 
+                        highlight: highlight,
+                        mediaFile: otherMedia
                     });
                 }
             });

@@ -3,16 +3,24 @@
 
 <div class="container">
     <div class="mainVideo">
-        {{!-- Youtube video --}}
-        <iframe src={{main}} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        {{!-- Check to see if the highlight is a video --}}
+        {{#if (video highlight)}}
+            <iframe src={{highlight}} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        {{else}}
+            {{!-- img will go here --}}
+        {{/if}}
     </div>
 
     <div class="row galleryRow">
-        {{#each video}}
-            <div class="col-md-4">
-                <iframe src={{this}} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-        {{/each}}
+        <div class="col-md-4">
+            {{#each mediaFile}}
+                {{#if (video this)}}
+                    {{!-- iframe will go here --}}
+                {{else}}
+                    {{!-- img will go here --}}
+                {{/if}}
+            {{/each}}
+        </div>
     </div>
 </div>
 
