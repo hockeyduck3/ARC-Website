@@ -1,4 +1,4 @@
-.galleryTitle, .instaTitle {
+.galleryTitle {
     color: #2F3061;
     font-size: 32px;
     font-weight: 700;
@@ -6,15 +6,15 @@
     margin: 50px 0 50px 25px;
 }
 
-.mainVideo, .galleryRow {
+.highlight, .galleryRow {
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 
-.mainVideo iframe {
+.highlight iframe {
     box-shadow: 0px 0px 3px 1px #2F3061;
-    height: 45vw;
+    height: 50vw;
     width:  97%;
 }
 
@@ -26,14 +26,6 @@
     box-shadow: 0px 0px 3px 1px #2F3061;
     height: 25vh;
     margin-bottom: 10%;
-    width: 100%;
-}
-
-.imagesRow {
-    margin-bottom: 100px;
-}
-
-.imagesRow img {
     width: 100%;
 }
 
@@ -55,11 +47,7 @@
         margin-bottom: 30px;
     }
 
-    .galleryTitle, .instaTitle {
+    .galleryTitle {
         margin: 20px 0;
-    }
-
-    .imagesRow {
-        margin-bottom: 20px;
     }
 }
