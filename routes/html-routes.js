@@ -113,8 +113,8 @@ router.get('/gallery', (req, page) => {
                 highlight = media.Main.replace(/watch\?v=/g, 'embed/');
 
             } else {
-                // If it's an image, don't mess with it
-                highlight = media.Main;
+                // If it's an image, make sure it has no spaces
+                highlight = media.Main.replace(/ /g, "\\ ");
             }
 
 
@@ -131,7 +131,8 @@ router.get('/gallery', (req, page) => {
                     otherMedia.unshift(newFile);
 
                 } else {
-                    otherMedia.unshift(file);
+                    let img = file.replace(/ /g, "\\ ");
+                    otherMedia.unshift(img);
                 }
             });
 

@@ -7,7 +7,7 @@
         {{#if (video highlight)}}
             <iframe src={{highlight}} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         {{else}}
-            {{!-- img will go here --}}
+            <div class="imageHighlight" style="background-image: url({{highlight}});"></div>
         {{/if}}
     </div>
 
@@ -18,7 +18,9 @@
                         <iframe src={{this}} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                 {{else}}
-                    {{!-- img will go here --}}
+                    <div class="col-md-4">
+                        <div class="galleryImage" style="background-image: url({{this}});"></div>
+                    </div>
                 {{/if}}
             {{/each}}
     </div>
