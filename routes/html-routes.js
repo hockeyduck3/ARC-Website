@@ -154,6 +154,7 @@ router.get('/gallery', (req, page) => {
                         gallery: true,
                         cssFolder: 'gallery',
                         styleSheets: styleSheets,
+                        javascript: 'modal.js',
                         highlight: highlight,
                         mediaFile: otherMedia
                     });

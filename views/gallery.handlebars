@@ -1,3 +1,17 @@
+<!-- Modal -->
+<div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true" style="float: right; margin-right: 15px; font-size: 3rem;">&times;</span>
+        </button>
+        <div class="modal-body" style="padding-top: 5px;">
+            <img src="" alt="..." id="modalImage" style="border-radius: 5px; box-shadow: 1px 1px 5px 2px #2F3061; width: 100%;">
+        </div>
+    </div>
+  </div>
+</div>
+
 {{!-- Title --}}
 <h1 class="galleryTitle">Media Gallery</h1>
 
@@ -19,7 +33,7 @@
                     </div>
                 {{else}}
                     <div class="col-md-4">
-                        <div class="galleryImage" style="background-image: url({{this}});"></div>
+                        <div class="galleryImage" style="background-image: url({{this}});" data-img={{image this}}></div>
                     </div>
                 {{/if}}
             {{/each}}
