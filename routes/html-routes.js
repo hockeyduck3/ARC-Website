@@ -268,6 +268,11 @@ router.get('/press', (req, page) => {
         
                         dataArray.unshift(dataObj);
                     });
+
+                    // This will sort the array and make sure that the newest article will always appear first.
+                    dataArray.sort((a, b) => {
+                        return new Date(b.date) - new Date(a.date)
+                    });
         
                     page.render('press', {
                         about: true,
