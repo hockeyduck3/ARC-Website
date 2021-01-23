@@ -87,8 +87,11 @@
         font-size: 25px;
     }
 
+    .indexText {
+        transform: translate(-50%, -100%);
+    }
+
     .indexDonateBtn {
-        font-size: 18px;
-        width: 120px;
+        display: none;
     }
 }

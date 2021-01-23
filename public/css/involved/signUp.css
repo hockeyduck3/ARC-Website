@@ -10,6 +10,8 @@
 }
 
 .signUp img {
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px 1px #9a9afa;
     float: right;
     margin: 50px 0;
     width: 46%;
