@@ -1,0 +1,39 @@
+.servingImg {
+    position: relative;
+}
+
+.overlay {
+    background-color: rgb(47, 48, 97);
+}
+
+.overlay img {
+    opacity: 0.6;
+    margin-bottom: 50px;
+}
+
+.servingText h1 {
+    color: #fff;
+    font-weight: 700;
+    font-size: 45px;
+    text-align: center;
+}
+
+.servingText {
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -70%);
+}
+
+
+/* Media Queries */
+@media (max-width: 767px) {
+    .servingText {
+        transform: translate(-50%, -80%);
+    }
+
+    .servingText h1 {
+        font-size: 22px;
+    }
+}
