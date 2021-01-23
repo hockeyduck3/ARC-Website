@@ -10,15 +10,7 @@ $('.submitBtn').click(event => {
     let lastName = $('#lastNameInput').val().trim();
     let fullName = `${firstName} ${lastName}`;
     let email = $('#emailInput').val().trim();
-    let text = $('#textInput').val().trim();
-    let message;
-
-    // Check to see if the user left a message or not
-    if (text === '') {
-        message = `${firstName} did not leave a message.`;
-    } else {
-        message = `Here is your message from ${firstName}, ${text}`
-    }
+    let message = $('#textInput').val().trim();
 
     // Array for checking for errors
     let errorTestArr = ['#firstNameInput', '#lastNameInput', '#emailInput'];
